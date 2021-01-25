@@ -1,0 +1,115 @@
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <ul class="list-unstyled components">
+
+        <!-- Home -->      
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <hr>
+        <!-- Current Conditions -->      
+            <li>
+                <a href="/current-conditions">Current Conditions</a>
+            </li>
+        <!-- Collections -->
+            <hr>
+            <li class="active">
+
+                <a routerLink="/collections" 
+                    data-toggle="collapse" 
+                    class="dropdown-toggle"
+                    aria-expanded="false" 
+                    (click)="showSubMenu = !showSubMenu">Collections</a>
+                    
+            <!-- Sub-Menu -->
+                <ul *ngIf="showSubMenu" class="list-unstyled" 
+                    id="collectionsSubmenu">
+                <!-- Add New -->
+                    <li>
+                        <a routerLink="/add-new">Add New</a>
+                    </li>
+                <!-- Classifications -->
+                    <li>
+                        <a routerLink="/classifications">Classifications</a>
+                    </li>
+                <!-- All Items -->
+                    <li>
+                        <a routerLink="/all-items">All Items</a>
+                    </li>
+                </ul>
+            </li>
+        
+           
+
+        <!-- Cleaning Techniques -->
+            <hr>
+            <li>
+                <a routerLink="/cleaning-techniques"
+                    data-target="#cleaningSubmenu" 
+                    data-toggle="collapse" 
+                    aria-expanded="false" 
+                    class="dropdown-toggle" 
+                    role="button">Cleaning Techniques +</a>
+            <!-- Sub-Menu -->
+                <ul class="collapse list-unstyled" id="cleaningSubmenu">
+                    <li>
+                        <a routerLink="/add-new">Add New</a>
+                    </li>
+                    <li>
+                        <a routerLink="/classifications">Classifications</a>
+                    </li>
+                    <li>
+                        <a routerLink="/all-items">All Items</a>
+                    </li>
+                </ul>
+            </li>
+        <!-- Research Resources -->
+            <hr>
+            <li>
+                <a href="#">Research Resources</a>
+            </li>
+
+        <!-- Excursion Log -->
+            <hr>
+            <li>
+                <a href="#">Excursion Log</a>
+            </li>
+            
+        <!-- Profile -->
+            <li class="profile-bar">
+                <a href="/profile">
+                    <img src="../../assets/profile-image.png" 
+                        alt="Profile Image" class="profile-image">
+                    Profile
+                </a>
+            </li>
+        </ul>
+      
+        <!-- <div class="profile-bar">
+            Profile
+            <img src="../../assets/profile-image.png" 
+                alt="" class="profile-image">
+            Profile
+        </div> -->
+    </nav>
+
+
+
+    <!-- Page Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+    
+                <button (click)="onToggle();" type="button" id="sidebarCollapse" class="btn btn-info">
+                    <span>Toggle Sidebar</span>
+                </button>
+                
+               <router-outlet></router-outlet>
+
+            </div>
+        </nav>
+    </div>
+
+</div>   
