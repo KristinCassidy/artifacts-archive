@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { element } from 'protractor';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +6,15 @@ import { element } from 'protractor';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public showSubMenu = false;
+  @Input() showColSubMenu = false;
+  @Input() showProcSubMenu = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onToggle() {
+  onToggle(event: any) {
     let sidebar = document.getElementById("sidebar");
       if ( sidebar.className !== "active") {
         sidebar.className = "active";

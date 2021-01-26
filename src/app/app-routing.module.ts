@@ -3,12 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CollectionsComponent } from './navbar/collections/collections.component';
-// import { HomeComponent }  from './home/home.component';
+import { HomeComponent }  from './navbar/home/home.component';
+import { ArtifactComponent } from './navbar/collections/artifact/artifact.component';
+import { ProfileComponent } from './navbar/profile/profile.component';
+import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
+import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  // { path: '', component: AppComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'collections', component: CollectionsComponent },
-
+  { path: 'artifact', component: ArtifactComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'excursion-log', component: ExcursionLogComponent },
+  { path: 'new-item', component: AddArtifactComponent },
 ];
 
 @NgModule({

@@ -9,6 +9,12 @@ import { HeaderComponent } from './header/header.component';
 import { CollectionsComponent } from './navbar/collections/collections.component';
 import { HomeComponent } from './navbar/home/home.component';
 import { ArtifactComponent } from './navbar/collections/artifact/artifact.component';
+import { ProfileComponent } from './navbar/profile/profile.component';
+import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
+import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+
+// import { CollectionsService } from './navbar/collections.service';
+// import { Collection } from './navbar/collections/collection.model'
 
 
 
@@ -20,6 +26,11 @@ import { ArtifactComponent } from './navbar/collections/artifact/artifact.compon
     CollectionsComponent,
     HomeComponent,
     ArtifactComponent,
+    ProfileComponent,
+    ExcursionLogComponent,
+    AddArtifactComponent,
+    // CollectionsService,
+    // Collection,
   ],
   imports: [
     BrowserModule,

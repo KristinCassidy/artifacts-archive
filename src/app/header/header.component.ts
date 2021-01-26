@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-// import { CollectionsComponent } from ''
-import { NavbarComponent } from '../navbar/navbar.component'
-
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,5 +12,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // onSelected() {   }
+
+  onToggle(event: Event) {
+    let sidebar = document.getElementById("sidebar");
+      if ( sidebar.className !== "active") {
+        sidebar.className = "active";
+      } else {
+        sidebar.className = "";
+      };
+  } 
 
 }

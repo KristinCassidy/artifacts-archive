@@ -1,115 +1,116 @@
 <div class="wrapper">
 
     <!-- Sidebar -->
-    <nav id="sidebar">
-        <ul class="list-unstyled components">
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
 
         <!-- Home -->      
-            <li>
-                <a routerLink="/">Home</a>
-            </li>
-            <hr>
-        <!-- Current Conditions -->      
-            <li>
-                <a href="/current-conditions">Current Conditions</a>
-            </li>
-        <!-- Collections -->
-            <hr>
-            <li class="active">
+                <li routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="/home">Home</a>
+                </li>
 
-                <a routerLink="/collections" 
-                    data-toggle="collapse" 
-                    class="dropdown-toggle"
-                    aria-expanded="false" 
-                    (click)="showSubMenu = !showSubMenu">Collections</a>
+                <!-- <hr> -->
+
+        <!-- Collections -->
+                <li routerLinkActive="active">
+                    <a routerLink="/collections" 
+                        data-toggle="collapse" 
+                        class="dropdown-toggle"
+                        aria-expanded="false" 
+                        (click)="showColSubMenu = !showColSubMenu">Collections +</a>
                     
             <!-- Sub-Menu -->
-                <ul *ngIf="showSubMenu" class="list-unstyled" 
-                    id="collectionsSubmenu">
-                <!-- Add New -->
-                    <li>
-                        <a routerLink="/add-new">Add New</a>
-                    </li>
-                <!-- Classifications -->
-                    <li>
-                        <a routerLink="/classifications">Classifications</a>
-                    </li>
-                <!-- All Items -->
-                    <li>
-                        <a routerLink="/all-items">All Items</a>
-                    </li>
-                </ul>
-            </li>
-        
-           
+                    <ul *ngIf="showColSubMenu" 
+                        class="list-unstyled" 
+                        id="collectionsSubmenu">
 
-        <!-- Cleaning Techniques -->
-            <hr>
-            <li>
-                <a routerLink="/cleaning-techniques"
-                    data-target="#cleaningSubmenu" 
+                <!-- New Item -->
+                        <li routerLinkActive="active">
+                            <a routerLink="/new-item">New Item</a>
+                        </li>
+                <!-- Classifications -->
+                        <li routerLinkActive="active">
+                            <a routerLink="/classifications">Classifications</a>
+                        </li>
+                <!-- All Items -->
+                        <li routerLinkActive="active">
+                            <a routerLink="/all-items">All Items</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- <hr> -->
+ 
+        <!-- Processes -->
+            <!-- <li routerLinkActive="active">
+                <a routerLink="/processes"
                     data-toggle="collapse" 
                     aria-expanded="false" 
                     class="dropdown-toggle" 
-                    role="button">Cleaning Techniques +</a>
+                    (click)="showProcSubMenu = !showProcSubMenu">Processes +</a> -->
+                    
             <!-- Sub-Menu -->
-                <ul class="collapse list-unstyled" id="cleaningSubmenu">
-                    <li>
-                        <a routerLink="/add-new">Add New</a>
+
+                <!-- <ul *ngIf="showProcSubMenu" 
+                    class="collapse list-unstyled" 
+                    id="processSubmenu"> -->
+
+                <!-- Cleaning Techniques -->
+
+                    <!-- <li routerLinkActive="active">
+                        <a routerLink="/cleaning-techniques">Cleaning Techniques</a>
                     </li>
-                    <li>
+
+                    <li routerLinkActive="active">
                         <a routerLink="/classifications">Classifications</a>
                     </li>
-                    <li>
+                    <li routerLinkActive="active">
                         <a routerLink="/all-items">All Items</a>
-                    </li>
-                </ul>
-            </li>
+                    </li> -->
+
+                <!-- </ul> -->
+                
+            <!-- </li> -->
+
         <!-- Research Resources -->
-            <hr>
-            <li>
-                <a href="#">Research Resources</a>
-            </li>
+            
+            <!-- <li routerLinkActive="active">
+                <a routerLink="/research">Research Resources</a>
+            </li> -->
 
         <!-- Excursion Log -->
-            <hr>
-            <li>
-                <a href="#">Excursion Log</a>
-            </li>
+            <!-- <hr> -->
+            <!-- <li routerLinkActive="active">
+                <a routerLink="/excursion-log">Excursion Log</a>
+            </li> -->
             
         <!-- Profile -->
-            <li class="profile-bar">
-                <a href="/profile">
+            <li  class="profile-bar">
+                <a routerLink="/profile">
                     <img src="../../assets/profile-image.png" 
-                        alt="Profile Image" class="profile-image">
+                        alt="Profile Image" 
+                        class="profile-image">
                     Profile
                 </a>
             </li>
         </ul>
-      
-        <!-- <div class="profile-bar">
-            Profile
-            <img src="../../assets/profile-image.png" 
-                alt="" class="profile-image">
-            Profile
-        </div> -->
-    </nav>
 
+    </nav>
 
 
     <!-- Page Content -->
     <div id="content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
             <div class="container-fluid">
     
-                <button (click)="onToggle();" type="button" id="sidebarCollapse" class="btn btn-info">
+                <!-- <button (click)="onToggle($event);" type="button" id="sidebarCollapse" class="btn btn-info">
                     <span>Toggle Sidebar</span>
                 </button>
-                
-               <router-outlet></router-outlet>
-
+                 -->
+                 <router-outlet></router-outlet>
             </div>
-        </nav>
+        <!-- </nav> -->
     </div>
 
 </div>   

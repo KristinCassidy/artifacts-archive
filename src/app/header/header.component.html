@@ -1,13 +1,24 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
+
         <div class="navbar-header navbar-left">
-            <a class="navbar-brand" href="#"><img role="button" src="/assets/menu.png" alt="menu button"></a> 
-            <a class="navbar-brand" style="padding-left:1em" routerLink="/">ARTIFACTS ARCHIVE</a> 
+            <a class="navbar-brand" href="#">
+                <img (click)="onToggle($event)" 
+                    role="button" 
+                    src="/assets/menu.png" 
+                    alt="menu button">
+            </a> 
+            <a class="navbar-brand" 
+                style="padding-left:1em" 
+                routerLink="/home">ARTIFACTS ARCHIVE
+            </a> 
         </div>
 
         <div class="collapse navbar-collapse">
             <form class="navbar-form navbar-right" role="search">
-                <button type="submit"><i id="search" class="bi bi-search"></i></button>
+                <button type="submit">
+                    <i id="search" class="bi bi-search"></i>
+                </button>
                 <div class="form-group">
                     <input type="text" class="form-control">
                 </div>  
