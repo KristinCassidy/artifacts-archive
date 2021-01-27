@@ -12,6 +12,7 @@ import { ArtifactComponent } from './navbar/collections/artifact/artifact.compon
 import { ProfileComponent } from './navbar/profile/profile.component';
 import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
 import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
 
 // import { CollectionsService } from './navbar/collections.service';
 // import { Collection } from './navbar/collections/collection.model'
@@ -29,6 +30,7 @@ import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact
     ProfileComponent,
     ExcursionLogComponent,
     AddArtifactComponent,
+    ArtifactProfileComponent,
     // CollectionsService,
     // Collection,
   ],

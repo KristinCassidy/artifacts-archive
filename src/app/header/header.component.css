@@ -4,6 +4,7 @@ nav {
     border: none;
     background: none;
     padding: 1vh 1vh 1vh 3vh;
+    transition: all 0.3s;
 }
 
 a {
@@ -20,6 +21,8 @@ input {
     border-radius: 0%;
 }
 
+
+
 i {
     font-size: large;
     padding-right: 0.4em;
@@ -28,6 +31,10 @@ i {
 button {
     border: none;
     background-color: rgba(255, 255, 255, 0);
+}
+
+button:focus {
+    outline: white;
 }
 
 img {
@@ -39,6 +46,4 @@ img:hover {
     cursor: pointer;
 }
 
-.navbar-form {
-    padding: 0;
-}
+

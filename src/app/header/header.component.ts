@@ -7,6 +7,7 @@ import { Event } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  openSearch = false;
 
   constructor() { }
 

@@ -8,6 +8,7 @@ import { ArtifactComponent } from './navbar/collections/artifact/artifact.compon
 import { ProfileComponent } from './navbar/profile/profile.component';
 import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
 import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'excursion-log', component: ExcursionLogComponent },
   { path: 'new-item', component: AddArtifactComponent },
+  { path: 'artifact-profile', component: ArtifactProfileComponent },
 ];
 
 @NgModule({
