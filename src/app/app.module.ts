@@ -11,11 +11,12 @@ import { HomeComponent } from './navbar/home/home.component';
 import { ArtifactComponent } from './navbar/collections/artifact/artifact.component';
 import { ProfileComponent } from './navbar/profile/profile.component';
 import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
-import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+import { AddArtifactComponent } from './navbar/collections/artifact/add-artifact/add-artifact.component';
 import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
-
-// import { CollectionsService } from './navbar/collections.service';
-// import { Collection } from './navbar/collections/collection.model'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CollectionsService } from './navbar/collections/collections.service';
+import { ResearchComponent } from './navbar/research/research.component';
+import { CollectionComponent } from './navbar/collections/collection/collection.component';
 
 
 
@@ -31,15 +32,16 @@ import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact
     ExcursionLogComponent,
     AddArtifactComponent,
     ArtifactProfileComponent,
-    // CollectionsService,
-    // Collection,
+    PageNotFoundComponent,
+    ResearchComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CollectionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,3 +2,32 @@ img {
     height: 20vw;
     margin: 1vh;
 }
+
+.collection-thumbnail {
+    height: 20vw;
+    width: 15vw;
+    background-image: url("../../../assets/marbles/20200218-_MG_1034.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.collection-preview {
+    text-align: center;
+    color: rgba(104, 104, 104, 0.575);
+    display: flexbox;
+    width: max-content;
+    outline: solid 1px;
+    padding: 0.8em;
+    margin: 1em;
+}
+
+.badge {
+    margin-left: 1.2em;
+}
+
+.collections-gallery {
+    display: flex;
+    flex-direction: row;
+}

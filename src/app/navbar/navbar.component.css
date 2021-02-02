@@ -5,9 +5,11 @@
 }
 
 #sidebar {
+    display: fluid;
+    position: fill;
     min-width: 200px;
     max-width: 200px;
-    height: 90vh;
+    height: 100vh;
     /* outline: 1px solid rgba(0, 0, 0, 0.308); */
     /* outline-offset: -2px; */
     border-right: 1px solid rgba(0, 0, 0, 0);
@@ -21,7 +23,7 @@
 }
 
 #sidebar.active {
-    margin-left: -205px;
+    margin-left: -200px;
     
 }
 
@@ -103,7 +105,7 @@ hr {
 
 .profile-bar {
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     border-top: solid white;
     width: 200px;

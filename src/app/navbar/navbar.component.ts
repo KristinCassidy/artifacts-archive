@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @Input() showColSubMenu = false;
-  @Input() showProcSubMenu = false;
+  @Input() showCollectionsSubMenu = false;
+  @Input() showResearchSubMenu = false;
 
   constructor() { }
 
@@ -22,6 +22,8 @@ export class NavbarComponent implements OnInit {
         sidebar.className = "";
       };
   } 
+
+  
  
   
 }

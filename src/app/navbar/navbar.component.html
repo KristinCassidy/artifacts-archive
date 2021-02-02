@@ -18,27 +18,65 @@
                         data-toggle="collapse" 
                         class="dropdown-toggle"
                         aria-expanded="false" 
-                        (click)="showColSubMenu = !showColSubMenu">Collections +</a>
+                        (click)="showCollectionsSubMenu = !showCollectionsSubMenu; showResearchSubMenu = false">Collections +</a>
                     
-            <!-- Sub-Menu -->
-                    <ul *ngIf="showColSubMenu" 
-                        class="list-unstyled" 
-                        id="collectionsSubmenu">
+                            <!-- Sub-Menu -->
+                                    <ul *ngIf="showCollectionsSubMenu" 
+                                        class="list-unstyled" 
+                                        id="collectionsSubMenu">
 
-                <!-- New Item -->
-                        <li routerLinkActive="active">
-                            <a routerLink="/new-item">New Item</a>
-                        </li>
-                <!-- Classifications -->
-                        <li routerLinkActive="active">
-                            <a routerLink="/classifications">Classifications</a>
-                        </li>
-                <!-- All Items -->
-                        <li routerLinkActive="active">
-                            <a routerLink="/all-items">All Items</a>
-                        </li>
-                    </ul>
+                                <!-- New Item -->
+                                        <li routerLinkActive="active">
+                                            <a routerLink="/new-item">New Item</a>
+                                        </li>
+                     
+                                    </ul>
+                                </li>
+
+        <!-- Excursions -->
+                <li routerLinkActive="active">
+                    <a routerLink="/excursion-log"
+                    data-toggle="collapse" 
+                    class="dropdown-toggle"
+                    aria-expanded="false" 
+                    >Excursions</a>
                 </li>
+
+        <!-- Research -->
+                <li routerLinkActive="active">
+                    <a routerLink="/research"
+                    data-toggle="collapse" 
+                    class="dropdown-toggle"
+                    aria-expanded="false" 
+                    (click)="showResearchSubMenu = !showResearchSubMenu; showCollectionsSubMenu = false"
+                    >Research +</a>
+                </li>
+                
+                    
+                <!-- Sub-Menu -->
+                        <ul *ngIf="showResearchSubMenu" 
+                            class="list-unstyled" 
+                            >
+
+                    <!-- New Item -->
+                            <li routerLinkActive="active">
+                                <a routerLink="/new-item">New Item</a>
+                            </li>
+         
+                        </ul>
+                    
+
+
+
+
+                           <!-- Classifications -->
+                                        <!-- <li routerLinkActive="active">
+                                            <a routerLink="/classifications">Classifications</a>
+                                        </li> -->
+                                <!-- All Items -->
+                                        <!-- <li routerLinkActive="active">
+                                            <a routerLink="/all-items">All Items</a>
+                                        </li> -->
 
                 <!-- <hr> -->
  

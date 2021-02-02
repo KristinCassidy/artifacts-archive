@@ -1,0 +1,42 @@
+.main-image {
+    width: 40%;
+    border: 1px solid rgba(128, 128, 128, 0.164);
+}
+
+.artifact-info-container{
+    display: flex;
+    margin: 1em;
+
+}
+.artifact-info {
+    display: flexbox;
+    width: fill;
+    padding: 1em 4em 2em 4em;
+    /* outline: solid; */
+    
+}
+
+/* .title {
+    
+} */
+
+table {
+    column-gap: 3em;
+}
+
+td {
+    padding: 0.2em 1em;
+}
+
+.more-images {
+    outline: solid;
+    display: flexbox;
+    height: 10em;
+    width: 38%;
+    margin: 2em 5em 1em 1em;
+}
+
+ul {
+    outline: solid;
+}
+

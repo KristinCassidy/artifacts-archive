@@ -7,8 +7,9 @@ import { HomeComponent }  from './navbar/home/home.component';
 import { ArtifactComponent } from './navbar/collections/artifact/artifact.component';
 import { ProfileComponent } from './navbar/profile/profile.component';
 import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
-import { AddArtifactComponent } from './navbar/collections/sub-menu/add-artifact/add-artifact.component';
+import { AddArtifactComponent } from './navbar/collections/artifact/add-artifact/add-artifact.component';
 import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
+import { ResearchComponent } from './navbar/research/research.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'excursion-log', component: ExcursionLogComponent },
   { path: 'new-item', component: AddArtifactComponent },
   { path: 'artifact-profile', component: ArtifactProfileComponent },
+  { path: 'research', component: ResearchComponent },
+  { path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({

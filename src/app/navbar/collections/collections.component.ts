@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Collection } from './collection.model';
+import { Collection } from './collection/collection.model';
 
 @Component({
   selector: 'app-collections',
@@ -8,9 +8,9 @@ import { Collection } from './collection.model';
 })
 export class CollectionsComponent implements OnInit {
   collections: Collection[] =[
-    new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
-    new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
-    new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
+    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
+    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
+    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
   ];
 
   constructor() { }
