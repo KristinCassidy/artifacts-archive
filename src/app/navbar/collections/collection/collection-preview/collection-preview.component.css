@@ -1,0 +1,28 @@
+.badge {
+    margin-left: 1.2em;
+}
+
+img {
+    height: 20vw;
+    margin: 1vh;
+}
+
+.collection-thumbnail {
+    height: 20vw;
+    width: 15vw;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/52017163e4b0deac40143e69/1514317725181-16OZY4ARGPP4RWV4045Z/ke17ZwdGBToddI8pDm48kEA8s-TfNYykkez9FhSx_vx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UYZn44iTTCLpuK6rc3q1kSgzyvdBJd2gJej_A-sFj-hRWIB-7cQgYKo_bDpR6cEVkg/Scan+160.jpg+small.jpg?format=2500w");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.collection-preview {
+    text-align: center;
+    color: rgba(104, 104, 104, 0.575);
+    display: flexbox !important;
+    width: max-content;
+    outline: solid 1px;
+    padding: 0.8em;
+    margin: 1vw;
+}

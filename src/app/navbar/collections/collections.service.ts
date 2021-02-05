@@ -6,10 +6,14 @@ export class CollectionsService {
     private collections: Collection[] = [
         new Collection(
             'Keys',
+            1,
             'All types of keys, including Winding Keys',
             '../../../assets/keys/key-7', [
-                new Artifact('key 1', 1)
-            ]
-        )
-    ]
+                new Artifact('key 1', 1),
+                new Artifact( 'key 2', 2)
+            ])
+    ];
+
+    // constructor
+
 }

@@ -1,0 +1,14 @@
+<div class="collection-preview">
+
+    <a [routerLink]="[collection.name]">
+        <div 
+            [ngStyle]="{ backgroundImage: getImage()}"
+            class="collection-thumbnail">
+        </div>
+
+        <h4>{{ collection.name }}
+            <span class="badge">{{ collection.artifacts.length }}</span>
+        </h4>
+    </a>
+
+</div>

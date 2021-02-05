@@ -1,9 +1,9 @@
-img {
+/* img {
     height: 20vw;
     margin: 1vh;
-}
+} */
 
-.artifact-thumbnail {
+/* .artifact-thumbnail {
     height: 20vw;
     width: 15vw;
     background-image: url(".././../../../assets/keys/key-7.jpg");
@@ -11,12 +11,18 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 
+} */
+
+.collection-gallery {
+    display: flex;
+    flex-direction: row;
 }
 
-.artifact-preview {
+.collection-preview {
     text-align: center;
     color: rgba(104, 104, 104, 0.575);
-    display: flexbox !important;
+    display: flexbox;
+    
     width: max-content;
     outline: solid 1px;
     padding: 0.8em;
@@ -24,7 +30,3 @@ img {
 }
 
 
-.artifact-gallery {
-    display: flex !important;
-    flex-direction: row !important;
-}

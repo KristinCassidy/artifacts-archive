@@ -17,6 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CollectionsService } from './navbar/collections/collections.service';
 import { ResearchComponent } from './navbar/research/research.component';
 import { CollectionComponent } from './navbar/collections/collection/collection.component';
+import { CollectionPreviewComponent } from './navbar/collections/collection/collection-preview/collection-preview.component';
+import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
+import { CollectionService } from './navbar/collections/collection/collection.service';
 
 
 
@@ -34,14 +37,16 @@ import { CollectionComponent } from './navbar/collections/collection/collection.
     ArtifactProfileComponent,
     PageNotFoundComponent,
     ResearchComponent,
-    CollectionComponent
+    CollectionComponent,
+    CollectionPreviewComponent,
+    CollectionGalleryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [CollectionsService],
+  providers: [ CollectionService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -55,23 +55,18 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-/* #sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
-} */
-
 #sidebar ul.components {
-    padding: 20px 0;
+    padding: 2em 0;
     /* border-bottom: 1px solid #ffffff; */
 }
 
 #sidebar ul {
     color: #fff;
-    padding: 10px;
+    padding: 1em;
 }
 
 #sidebar ul li a {
-    padding: 10px;
+    padding: 0.8em;
     font-size: 1.1em;
     display: block;
 }
@@ -87,7 +82,7 @@ a, a:hover, a:focus {
 
 ul ul a {
     font-size: 0.9em !important;
-    padding-left: 30px !important;
+    padding-left: 3.3em !important;
 }
 
 hr {
@@ -98,8 +93,8 @@ hr {
 .profile-image {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100%;
-    width: 40px;
-    margin: 0.4em .5em 0.5em 0em;
+    width: 2.8em;
+    margin: 0.4em .5em 0.5em 0.4em;
     
 }
 
