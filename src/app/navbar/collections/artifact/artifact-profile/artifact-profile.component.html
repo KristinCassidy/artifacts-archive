@@ -1,26 +1,28 @@
 <div class="container-fluid">
     <div class="artifact-info-container">
         <!-- <div> -->
-            <img class="main-image" src="../../../../../assets/keys/key-3.jpg" alt="clock key">
+            <img class="img-responsive" 
+            [src]="artifact.imagePath" 
+            alt="{{ artifact.name }}">
         <!-- </div> -->
         <div class="artifact-info">
 
             <div>
-                <h4 class="title">Clock Winding Key</h4>
+                <h4 class="title">{{ artifact.name }}</h4>
             </div>
 
             <div class="artifact-info">
                 <table>
                     <tr>
-                        <td>Collection:</td><td>Keys</td>
+                        <td>Collection:</td><td>{{ artifact.collection }}</td>
                     </tr>
                     <tr>
-                        <td>Year:</td><td>c. 1890 - 1930</td>
+                    <td>Year:</td><td>{{ artifact.year }}</td>
                     </tr>
-                        <td>Material:</td><td>Brass</td>
+                        <td>Material:</td><td>{{ artifact.material }}</td>
                     <tr>
                     </tr>
-                        <td>Logos:</td><td></td>
+                        <td>Description:</td><td>{{ artifact.description }}</td>
                     <tr>
                     </tr>
                     <tr>

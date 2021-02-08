@@ -14,12 +14,13 @@ import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.comp
 import { AddArtifactComponent } from './navbar/collections/artifact/add-artifact/add-artifact.component';
 import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CollectionsService } from './navbar/collections/collections.service';
+// import { CollectionsService } from './navbar/collections/collections.service';
 import { ResearchComponent } from './navbar/research/research.component';
 import { CollectionComponent } from './navbar/collections/collection/collection.component';
 import { CollectionPreviewComponent } from './navbar/collections/collection/collection-preview/collection-preview.component';
 import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
 import { CollectionService } from './navbar/collections/collection/collection.service';
+import { CollectionEditComponent } from './navbar/collections/collection/collection-edit/collection-edit.component';
 
 
 
@@ -39,7 +40,8 @@ import { CollectionService } from './navbar/collections/collection/collection.se
     ResearchComponent,
     CollectionComponent,
     CollectionPreviewComponent,
-    CollectionGalleryComponent
+    CollectionGalleryComponent,
+    CollectionEditComponent
   ],
   imports: [
     BrowserModule,

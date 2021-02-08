@@ -1,6 +1,38 @@
 img {
-    height: 20vw;
-    margin: 1vh;
+   height: 1.6em; 
+}
+
+.collection-name {
+    display:flexbox;
+    font-family: helvetica;
+
+}
+
+h4 {
+    /* font-family: COURIER NEW; */
+    font-family: COURIER;
+   
+    /* font-family: MONOSPACE; */
+    color:rgba(85, 85, 85, 0.671);
+}
+
+.edit {
+    display:flexbox;
+    position: relative;
+    /* margin: 0 3vw 2vw 0; */
+    /* border-radius: 50%; */
+    /* outline: solid 1px; */
+    outline-offset: 0.3em;
+}
+
+.subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.2em 0 0 0.5em;
 }
 
 .artifact-thumbnail {
@@ -16,7 +48,7 @@ img {
 .artifact-preview {
     text-align: center;
     color: rgba(104, 104, 104, 0.575);
-    display: flexbox !important;
+    display: flexbox;
     width: max-content;
     outline: solid 1px;
     padding: 0.8em;
@@ -25,6 +57,11 @@ img {
 
 
 .artifact-gallery {
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.artifacts-gallery {
+    margin: 0 2em;
 }

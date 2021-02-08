@@ -1,0 +1,33 @@
+/* img {
+    height: 20vw;
+    margin: 1vh;
+} */
+
+.artifact-thumbnail {
+    height: 20vw;
+    width: 15vw;
+    background-image: url(".././../../../assets/keys/key-7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.artifact-preview {
+    /* text-align: center; */
+    /* color: rgba(104, 104, 104, 0.575); */
+    display: flexbox !important;
+    width: max-content;
+    /* outline: solid 1px; */
+    border: 2px solid rgba(0, 0, 0, 0.199);
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+
+.artifact-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    /* flex-flow: row; */
+}

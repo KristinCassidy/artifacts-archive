@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Collection } from '../collection.model';
 
@@ -12,7 +13,7 @@ export class CollectionPreviewComponent implements OnInit {
   @Input() collection: Collection;
   @Input() index: number;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

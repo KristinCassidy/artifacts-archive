@@ -1,35 +1,41 @@
 <div class="container-fluid">
-  
-    <h4>{{ collection.name }}:</h4>
+    <h4>Collection: </h4>
+    <div class="artifacts-gallery">
+        <div class="subheader">
+            <div class="collection-name">
+               
+               <h2>{{ collection.name }}</h2>
+                
+            </div>
+            <div class="edit">
+                <a (click)="onEditCollection()">
+                    <img src="assets/icons/icon-edit_24px.svg">
+                </a>
+            </div>
+        </div>
+    
+        <div class="artifact-gallery">
+        <!-- insert artifact images here -->
+            <app-artifact
+                *ngFor="let item of collection.artifacts; let i = artifactIndex;"
+                [artifact]="item"
+                [artifactIndex]="i"
+                ></app-artifact>
+        </div> 
+    </div>
+ 
+
 </div>
 
-<div class="artifacts-gallery">
 
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-    <div class="artifact-thumbnail"></div>
-
-
-    <!-- insert collection-previews here -->
-     <!-- <div> -->
-
-    <!-- </div> --> 
-        <!-- <div class="collection-preview"> -->
-            <!-- <a [routerLink]="[index]"> -->
-                <!-- <div class="artifact-thumbnail"></div> -->
-               
-            <!-- </a> -->
-        <!-- </div> -->
-        <!-- <app-collections></app-collections> -->
-
-
-</div> 
-
+<!-- <div class="container-fluid">
+    <div class="collection-gallery">
+ 
+        <app-collection-preview 
+            *ngFor="let collectionPreview of collections; let i = index"
+            [collection]="collectionPreview"
+            [index]="i"></app-collection-preview>
+  
+     </div>
+</div> -->
 

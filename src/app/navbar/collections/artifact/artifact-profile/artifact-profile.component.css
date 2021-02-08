@@ -10,7 +10,7 @@
 }
 .artifact-info {
     display: flexbox;
-    width: fill;
+    width: stretch;
     padding: 1em 4em 2em 4em;
     /* outline: solid; */
     

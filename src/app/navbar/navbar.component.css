@@ -6,7 +6,8 @@
 
 #sidebar {
     display: fluid;
-    position: fill;
+    position: stretch;
+    bottom: 0px;
     min-width: 200px;
     max-width: 200px;
     height: 100vh;
@@ -75,10 +76,10 @@ a, a:hover, a:focus {
     background: rgba(255, 255, 255, 0.336);
 } */
 
-/* #sidebar ul li.active > a, a[aria-expanded="true"] {
+#sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #6e6e6e8c;
-} */
+}
 
 ul ul a {
     font-size: 0.9em !important;

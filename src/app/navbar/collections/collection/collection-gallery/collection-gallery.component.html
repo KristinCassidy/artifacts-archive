@@ -1,9 +1,10 @@
 
 <div class="container-fluid">
+    <h4>Collections:</h4>
     <div class="collection-gallery">
  
         <app-collection-preview 
-            *ngFor="let collectionPreview of collections; let i = index"
+            *ngFor="let collectionPreview of collections; let i = index;"
             [collection]="collectionPreview"
             [index]="i"></app-collection-preview>
   

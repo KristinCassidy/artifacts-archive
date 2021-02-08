@@ -12,24 +12,28 @@ import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact
 import { ResearchComponent } from './navbar/research/research.component';
 import { CollectionComponent } from './navbar/collections/collection/collection.component';
 import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
+import { CollectionEditComponent } from './navbar/collections/collection/collection-edit/collection-edit.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: '', component: AppComponent },
   { path: 'home', component: HomeComponent },
   { path: 'collections', component: CollectionsComponent, children: [ 
     { path: '', component: CollectionGalleryComponent },
-    { path: ':`${collection.name}`', component: CollectionComponent }
-    // {path: 'artifact-profile', component: ArtifactProfileComponent },
-  ]},
- 
+    // { path: 'new', component: }
+    { path: ':id', component: CollectionComponent},
+    { path: ':id/edit', component: CollectionEditComponent },
+    { path: ':id/:name', component: ArtifactProfileComponent},
+    
+    // { path: ':`${collection.name}`', component: CollectionComponent
+    // , children: [
+      // { path: ':`${artifact.name}`', component: ArtifactProfileComponent }
+    // ]
+  ] },
   // { path: 'artifact', component: ArtifactComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'excursion-log', component: ExcursionLogComponent },
   { path: 'new-item', component: AddArtifactComponent },
- 
-
-  // ] path: 'collection'
   { path: 'research', component: ResearchComponent },
   { path: '**', redirectTo: '/not-found'}
 

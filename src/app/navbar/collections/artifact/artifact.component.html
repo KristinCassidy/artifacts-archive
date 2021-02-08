@@ -1,1 +1,11 @@
-<p>artifact works!</p>
+
+<div class="artifact-preview">
+
+    <a [routerLink]="[artifact.name]">
+        <div 
+            [ngStyle]="{ backgroundImage: getImage()}"
+            class="artifact-thumbnail">
+        </div>
+    </a>
+
+</div>
