@@ -62,7 +62,13 @@ export class CollectionService {
                 new Artifact( 'spoon 29', 29, 'Keys', '/assets/spoons/Spoons_29.jpg','', 1920, 'steel'),
                 new Artifact( 'spoon 30', 30, 'Keys', '/assets/spoons/Spoons_30.jpg','', 1920, 'steel'),
 
-            ]),            
+            ]),
+        new Collection('Gears', 3, '', '/assets/gears/gear-4.png',[]),
+        new Collection('Bottle Stoppers', 4, '', '/assets/bottle-stoppers/stopper-7.jpg',[]),
+        new Collection('Harmonica Reeds', 5, '', '/assets/harmonica-reeds/harmonica-2.png',[]),
+        new Collection('Buttons', 6, '', '/assets/buttons/button-4.jpg',[]),
+        // new Collection('Bottles', 7, '', '/assets/misc/bottle-1.jpg',[]),
+        new Collection('Miscellaneous', 7, '', '/assets/misc/license-to-buttin.jpg',[]),
     ];
 
     constructor() {}

@@ -21,9 +21,11 @@ const routes: Routes = [
   { path: 'collections', component: CollectionsComponent, children: [ 
     { path: '', component: CollectionGalleryComponent },
     // { path: 'new', component: }
-    { path: ':id', component: CollectionComponent},
+    { path: ':id', component: CollectionComponent, children: [
+      { path: ':name', component: ArtifactProfileComponent},
+    ]},
     { path: ':id/edit', component: CollectionEditComponent },
-    { path: ':id/:name', component: ArtifactProfileComponent},
+    
     
     // { path: ':`${collection.name}`', component: CollectionComponent
     // , children: [
