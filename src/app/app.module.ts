@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,8 +21,9 @@ import { CollectionPreviewComponent } from './navbar/collections/collection/coll
 import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
 import { CollectionService } from './navbar/collections/collection/collection.service';
 import { CollectionEditComponent } from './navbar/collections/collection/collection-edit/collection-edit.component';
-import { RiverLevelComponent } from './navbar/excursion-log/river-level/river-level.component';
-import { RiverLevelService } from './navbar/excursion-log/river-level/river-level.service';
+import { RiverLevelComponent } from './navbar/excursion-log/current-conditions/river-level/river-level.component';
+import { RiverLevelService } from './navbar/excursion-log/current-conditions/river-level/river-level.service';
+import { SubheaderComponent } from './header/subheader/subheader.component';
 
 
 @NgModule({
@@ -43,13 +44,15 @@ import { RiverLevelService } from './navbar/excursion-log/river-level/river-leve
     CollectionPreviewComponent,
     CollectionGalleryComponent,
     CollectionEditComponent,
-    RiverLevelComponent
+    RiverLevelComponent,
+    SubheaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ CollectionService, RiverLevelService ],
   bootstrap: [AppComponent]

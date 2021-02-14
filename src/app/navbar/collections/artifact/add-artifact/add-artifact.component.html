@@ -1,12 +1,108 @@
 
 <h3>New Item/ Add Item to Archive</h3>
 <hr>
-<button>
-    Add Item
-</button>
+<div class="container-fluid">
+    <form  [formGroup]="addArtifact" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div formGrouplName="artifactData">
+            <div class="form-group">
+                <label for="title">Title: </label>
+                    <input 
+                        type="text"
+                        id="title"
+                        formControlName="title"
+                        class="form-control">
+                <span
+                    *ngIf="!addArtifact.get('title').valid && addArtifact.get('title').touched;"
+                        class="help-block">Please enter a valid title!</span>
+            </div>
+            <div class="form-group">
+                <label for="collection">Collection: </label>
+                <select 
+                    class="custom-select form-control" 
+                    style="cursor: pointer" 
+                    formControlName="collection" 
+                    id="collection">
+                    <option *ngFor="let collection of collections"
+                         value="{{ collection.name }}">{{collection.name}}
+                    </option>
+                </select>
+                <span 
+                    *ngIf="!addArtifact.get('collection').valid && addArtifact.get('collection').touched;"
+                    class="help-block">Please select a collection!</span>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Year: </label>
+                    <input 
+                        type="number"
+                        id="age"
+                        formControlName="age"
+                        class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="material">Marerial: </label>
+                    <select class="custom-select form-control" style="cursor: pointer" formControlName="material" id="material">
+                        <option value="ceramic">Ceramic</option>
+                        <option value="glass">Glass</option>
+                        <option value="metal">Metal</option>
+                        <option value="plastic">Plastic</option>
+                        <option value="stone">Stone</option>
+                        <option value="other">Other</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Description: </label>
+                    <textarea
+                        class="form-control"
+                        id="description"
+                        formControlName="desc"
+                    ></textarea>
+            </div>
+            <div formArrayName="keywords">
+                <h4>Keywords: </h4>
+                <button 
+                    class="btn btn-default" 
+                    type="button" 
+                    (click)="onAddKeyword()">Add Keyword</button>
+                <!-- <div
+                    class="form-group"
+                    *ngFor="let keywordControl of addArtifact.get('keywords').controls; let i = index">
+                        <input type="text" class="form-control" [formControlName]="i">
+                </div> -->
+            </div>
 
 
-<div class="panel">
+        </div>
+        <span *ngIf="!addArtifact.valid && addArtifact.touched" class="help-block">Please enter valid data!</span>
+        <button type="submit" class="btn btn-default">Submit</button>
+        
+        <button type="reset" class="btn btn-default"(click)="onReset()">Reset</button>
+    </form>
+</div>
+<!----
+      'title': new FormControl(null, Validators.required),
+      'collection': new FormControl(null),
+      'age': new FormControl(null),
+      'material': new FormControl(null),
+      'color': new FormControl(null),
+      'weight': new FormControl(null),
+      'logos': new FormControl(null),
+      'desc': new FormControl(null),
+      'locationFound': new FormControl(null, Validators.required),
+      'dateFound': new FormControl(null),
+      'image': new FormControl(null),
+    }),
+    'research': new FormControl(null)
+  })
+} -->
+
+
+
+
+
+
+<!-- <div class="panel">
     <h4>Finds</h4>
     <ul>
         <li>material</li>
@@ -28,7 +124,7 @@
 
 <h3>Materials</h3>
 <ul>
-    <li>Metal</li>
+    <li>Metal</li> -->
     <!-- Types:
         gold
         silver
@@ -50,7 +146,7 @@
         gear, lead sinker, decorative metal, pin, safety pin, cufflink, 
         key, fishing hook, buckle, key hole, lock, nail, screw, handle, 
         zipper-pull, lead tag] -->
-
+<!-- 
     <li>Glass (Colors: Clear, Aqua, Lavander, Green, Blue, Brown)</li>
         <ul>
             <li>Marble</li>
@@ -69,4 +165,4 @@
     <li>Stone</li>
     <li>Plastic</li>
     <li>Organic</li>
-</ul>
+</ul> -->

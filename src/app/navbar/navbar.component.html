@@ -29,6 +29,11 @@
                                         <li routerLinkActive="active">
                                             <a routerLink="/new-item">New Item</a>
                                         </li>
+
+                                 <!-- New Collection -->
+                                        <li routerLinkActive="active">
+                                            <a routerLink="/new-collection">New Collection</a>
+                                        </li>
                      
                                     </ul>
                                 </li>
@@ -136,12 +141,12 @@
 
     </nav>
 
-
+    
     <!-- Page Content -->
     <div id="content">
-       
             <div class="container-fluid">
-                 <router-outlet></router-outlet>
+                <app-subheader></app-subheader>
+                <router-outlet></router-outlet>
             </div>
        
     </div>

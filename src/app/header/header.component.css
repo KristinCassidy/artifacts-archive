@@ -15,13 +15,9 @@ a {
 }
 
 input {
-    /* width: 20vw; */
-    /* line-height: 18px; */
     border: 1px solid rgba(0, 0, 0, 0.664);
     border-radius: 0%;
 }
-
-
 
 i {
     font-size: large;

@@ -5,35 +5,36 @@ import { CollectionService } from '../collection/collection.service';
 import { Artifact } from './artifact.model';
 
 @Component({
-  selector: 'app-artifact',
-  templateUrl: './artifact.component.html',
-  styleUrls: ['./artifact.component.css'],
-  host: {'class': 'artifact-gallery'}
-})
+    selector: 'app-artifact',
+    templateUrl: './artifact.component.html',
+    styleUrls: ['./artifact.component.css'],
+    host: {'class': 'artifact-gallery'}
+    })
 export class ArtifactComponent implements OnInit {
-  @Input() artifact: Artifact;
-  @Input() artifactIndex: number;
-  // name: string;
+    @Input() artifact: Artifact;
+    @Input() index: number;
+  
 
-  constructor(private collectionService: CollectionService,
-              private router: Router,
-              private route: ActivatedRoute) { }
+    constructor(private collectionService: CollectionService, private router: Router,private route: ActivatedRoute) { 
+        // this.index = this.artifact.id;
+    }
 
-  ngOnInit() {
-    // this.route.params
-    //   .subscribe(
-    //     (params: Params) => {
-    //       this.name = params['name'];
-    //       this.artifact= this.collectionService.getArtifact(this.name);
-    //     }
-    //   );
-  }
+    ngOnInit() {
+        // this.route.params
+        // .subscribe(
+        //     (params: Params) => {
+        //     this.name = params['name'];
+        //     // this.artifact= this.collectionService.getArtifact(this.name);
+        //     }
+        // );
+    }
 
-  getImage() {
-    return `url(${this.artifact.imagePath})`;
-  }
+    getImage() {
+        return `url(${this.artifact.imagePath})`;
+    }
 
-  onArtifactProfile() {
-    this.router.navigate(['name'], {relativeTo: this.route});
-}
+    // getArtifact() {
+    //     return this.artifact;
+    // }
+
 }

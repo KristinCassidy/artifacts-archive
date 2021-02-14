@@ -7,8 +7,11 @@
                <h2>{{ collection.name }}</h2>
                 
             </div>
-            <div class="edit">
-                <a (click)="onEditCollection()">
+            <div class="edit-icons">
+                <a class="add" (click)="onAddArtifact()">
+                    <img src="assets/icons/add.png" alt="">
+                </a>
+                <a class="edit" (click)="onEditCollection()">
                     <img src="assets/icons/icon-edit_24px.svg">
                 </a>
             </div>
@@ -17,9 +20,10 @@
         <div class="artifact-gallery">
         <!-- insert artifact images here -->
             <app-artifact
-                *ngFor="let item of collection.artifacts; let i = artifactIndex;"
+                *ngFor="let item of collection.artifacts; let i = index;"
                 [artifact]="item"
-                [artifactIndex]="i"
+                [index]="i"
+                (click)="onArtifactProfile()"
                 ></app-artifact>
         </div> 
        

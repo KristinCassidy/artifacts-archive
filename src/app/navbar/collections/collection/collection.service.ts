@@ -1,7 +1,9 @@
+import { Subject } from 'rxjs';
 import { Artifact } from '../artifact/artifact.model';
 import { Collection } from './collection.model';
 
 export class CollectionService {
+    artifactSelected = new Subject<number>();
 
     private collections: Collection[] = [
         new Collection(
@@ -81,11 +83,11 @@ export class CollectionService {
         return this.collections[index];
     }
     
-    getArtifact(artifactIndex: number) {
-        return this.collections[artifactIndex];
+    getArtifact(index: number) {
+        return this.collections[index].artifacts[index];
     }
     
 //     addArtifactsToCollection(artifacts: Artifact[]) {
-//         this.artifactService.addArtifacts(artifacts);
+//         return this.artifactService.addArtifacts(artifacts);
 //     }
 }

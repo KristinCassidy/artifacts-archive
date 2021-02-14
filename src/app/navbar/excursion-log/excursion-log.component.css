@@ -1,0 +1,12 @@
+.excursion-page{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    outline: solid;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* h3 {
+    margin: 0;
+} */

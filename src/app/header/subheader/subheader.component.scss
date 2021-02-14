@@ -1,0 +1,36 @@
+$myColor:  rgba(0, 0, 0, 0.308);
+$myColor2: rgba(0, 0, 0, 0.521);
+
+i {
+    font-size: 1.5em;
+    color: $myColor;
+    vertical-align: middle;
+    position: relative;
+}
+
+i:hover {
+    color: black;
+    
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.subheader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: stretch;
+    margin: -0.5em 0 0 0;
+    padding-bottom: 0.4em;
+
+}
+
+.forward {
+    display: flexbox;
+}
+
+.back {
+    display: flexbox;
+}

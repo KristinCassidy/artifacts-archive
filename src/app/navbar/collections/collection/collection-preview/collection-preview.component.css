@@ -19,10 +19,15 @@ img {
 
 .collection-preview {
     text-align: center;
+    flex-wrap: wrap;
     color: rgba(104, 104, 104, 0.575);
     display: flexbox !important;
     width: max-content;
     outline: solid 1px;
     padding: 0.8em;
     margin: 1vw;
+}
+
+h4 {
+    word-break: break-all;
 }

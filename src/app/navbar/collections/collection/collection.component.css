@@ -16,13 +16,31 @@ h4 {
     color:rgba(85, 85, 85, 0.671);
 }
 
-.edit {
+.edit-ions {
     display:flexbox;
     position: relative;
     /* margin: 0 3vw 2vw 0; */
     /* border-radius: 50%; */
     /* outline: solid 1px; */
+    
+}
+
+.edit {
     outline-offset: 0.3em;
+}
+
+.edit:hover {
+    cursor: pointer;
+    opacity: 0.308;
+}
+
+.add {
+    margin-right: 1.4em;
+} 
+
+.add:hover {
+    cursor: pointer;
+    opacity: 0.308;
 }
 
 .subheader {

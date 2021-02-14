@@ -1,9 +1,6 @@
 .wrapper {
     display: flex;
     width: 100%;
-    align-items: stretch;
-    
-
 }
 
 #sidebar {
@@ -13,21 +10,15 @@
     min-width: 200px;
     max-width: 200px;
     height: 100vh;
-    /* outline: 1px solid rgba(0, 0, 0, 0.308); */
-    /* outline-offset: -2px; */
     border-right: 1px solid rgba(0, 0, 0, 0);
     margin-top: -19px;
-    /* background: #0e0e0e3b; */
     background: rgba(0, 0, 0, 0.308);
     color: rgb(255, 255, 255);
     transition: all 0.3s;
-    
-    /* box-shadow: 0.07em 0 0.1em rgba(48, 48, 48, 0.418); */
 }
 
 #sidebar.active {
     margin-left: -200px;
-    
 }
 
 a[data-toggle="collapse"] {
@@ -60,7 +51,6 @@ a, a:hover, a:focus {
 
 #sidebar ul.components {
     padding: 2em 0;
-    /* border-bottom: 1px solid #ffffff; */
 }
 
 #sidebar ul {
@@ -90,7 +80,6 @@ ul ul a {
 
 hr {
     margin: 0;
-    /* padding: 0 10px 0 1em; */
 }
 
 .profile-image {

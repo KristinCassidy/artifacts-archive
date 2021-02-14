@@ -16,11 +16,20 @@
 <!-- Header RIGHT -->
         <div class="collapse navbar-collapse">
             <form class="navbar-form navbar-right" role="search">
-                <button (click)="openSearch=!openSearch" data-toggle="collapse" data-target="#searchBar" type="submit">
+                <button 
+                    (click)="openSearch=!openSearch" 
+                    data-toggle="collapse" 
+                    data-target="#searchBar" 
+                    type="submit">
                     <i id="search" class="bi bi-search"></i>
                 </button>
-                <div *ngIf="openSearch" id="searchBar" class="form-group">
-                    <input disabled type="text" class="form-control">
+                <div 
+                    *ngIf="openSearch" 
+                    id="searchBar" 
+                    class="form-group">
+                    <input 
+                        disabled type="text" 
+                        class="form-control">
                 </div>  
            
             </form>

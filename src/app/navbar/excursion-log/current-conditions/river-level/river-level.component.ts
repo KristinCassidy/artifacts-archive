@@ -8,13 +8,17 @@ import { RiverLevelService } from './river-level.service';
 })
 export class RiverLevelComponent implements OnInit {
   weather: any;
+  forecast: any;
 
   constructor(private weatherService: RiverLevelService) { }
 
   ngOnInit() {
     this.weatherService.getWeather().subscribe(data => {
-      this.weather=data;
-    });
+      this.weather = data;
+    }); 
+	  this.weatherService.getForecast().subscribe(data => {
+	  	this.forecast = data;
+	  });
   }
 
 }
