@@ -1,25 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture,TestBed } from '@angular/core/testing';
 
 import { CollectionComponent } from './collection.component';
+import { CollectionService } from './collection.service';
 
-describe('CollectionComponent', () => {
-  let component: CollectionComponent;
-  let fixture: ComponentFixture<CollectionComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CollectionComponent ]
-    })
-    .compileComponents();
+describe('Component: Collection', () => {
+  beforeEach( () => {
+    TestBed.configureTestingModule({
+      declarations: [CollectionComponent]
+    });
+  })
+  it('should create the app', () => {
+    let fixture = TestBed.createComponent(CollectionComponent);
+    let app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CollectionComponent);
-    component = fixture.componentInstance;
+  it('should use the collection name from the Collection Service', () => {
+    let fixture = TestBed.createComponent(CollectionComponent);
+    let app = fixture.debugElement.componentInstance;
+    let collectionService = fixture.debugElement.injector.get(CollectionService);
     fixture.detectChanges();
-  });
+    expect(collectionService.getCollections.name).toEqual(app.collection.name);
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  })
 });

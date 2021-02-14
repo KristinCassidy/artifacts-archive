@@ -1,49 +1,47 @@
 
-    <p>Condition: {{ weather?.current.condition.text }}</p>
-    <p>Tempurature: {{ weather?.current.temp_f }} F</p>
-    <p>Location: {{ weather?.location.name}}, {{ weather?.location.region }}</p>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th colspan="4"><h4>Current Conditions</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" scope="row"><h6>Location: </h6></td>
+            <td colspan="3"><h5>{{ weather?.location.name }}, {{ weather?.location.region }}</h5></td>
+        </tr>
+        <tr>
+            <td colspan="1" scope="row"><h6>Date: </h6></td>
+            <td colspan="3"><h5>{{ weather?.location.localtime | date }}</h5></td>
+            
+        </tr>
+        <tr>
+            <td colspan="1"><h6>Time: </h6></td>
+            <td colspan="3"><h5>{{ weather?.location.localtime | date:'shortTime'}}</h5></td>
+            
+        </tr>
+        <tr>
+            <td colspan="1"><h6>Temp:</h6> </td>
+            <td colspan="3"><h5>{{ weather?.current.temp_f }} F</h5></td>
+        </tr>
+        <tr>
+            <td colspan="1"><h6>Feels Like:</h6></td>
+            <td colspan="3"><h5>{{ weather?.current.feelslike_f }} F</h5></td>
+        </tr>
+        <tr>
+            <td ><h6>Conditions: </h6></td>
+            <td colspan="3"><h5>{{ weather?.current.condition.text }}</h5></td>
+            
+        </tr>
+        <tr>
+            <td ><h6>River Level: </h6></td>
+            <td colspan="3">Coming Soon</td>
+          
+        </tr>
+    </tbody>
+</table>
+
+
     <!-- <p>Sunrise: {{ forecast?.forecastday?.astro?.sunrise }}</p> -->
     <!-- <p>Sunset: {{ forecast?.forecast?.forecastday?.astro?.sunset }}</p> -->
-
-
-
-
-
-<!-- weather:{
-    "location":{
-        "name":"Saint Louis",
-        "region":"Missouri","
-        country":"USA",
-        "lat":38.63,"lon":-90.19,
-        "tz_id":"America/Chicago",
-        "localtime_epoch":1612947642,
-        "localtime":"2021-02-10 3:00"
-    },
-    "current":{
-        "last_updated_epoch":1612946711,  
-        "last_updated":"2021-02-10 02:45",
-        "temp_f":15.1,
-        "is_day":0,
-        "condition": {
-        "text":"Patchy light snow",
-        "icon":"//cdn.weatherapi.com/weather/64x64/night/323.png",
-        "code":1210
-        },
-    "wind_mph":9.4,
-    "wind_kph":15.1,
-    "wind_degree":30,
-    "wind_dir":"NNE",
-    "pressure_mb":1027.0,
-    "pressure_in":30.8,
-    "precip_mm":0.0,
-    "precip_in":0.0,
-    "humidity":83,
-    "cloud":100,
-    "feelslike_f":4.3,
-    "vis_km":4.8,
-    "vis_miles":2.0,
-    "uv":1.0,
-    "gust_mph":11.2,
-    "gust_kph":18.0
-    }
-} -->

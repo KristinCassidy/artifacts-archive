@@ -9,6 +9,7 @@ import { RiverLevelService } from './river-level.service';
 export class RiverLevelComponent implements OnInit {
   weather: any;
   forecast: any;
+  astro: any
 
   constructor(private weatherService: RiverLevelService) { }
 
@@ -16,9 +17,12 @@ export class RiverLevelComponent implements OnInit {
     this.weatherService.getWeather().subscribe(data => {
       this.weather = data;
     }); 
-	  this.weatherService.getForecast().subscribe(data => {
-	  	this.forecast = data;
+	  this.weatherService.getForecast().subscribe(info => {
+	  	this.forecast = info;
 	  });
+    // this.weatherService.getAstro().subscribe(info => {
+	  // 	this.astro = info;
+	  // });
   }
 
 }

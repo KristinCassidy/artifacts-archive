@@ -3,3 +3,21 @@
     width: 100%;
     align-items: stretch;
 }
+
+.home-page {
+    display: flex;
+}
+
+.conditions {
+    display: flexbox;
+    width: 30vw;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    float: right;
+}
+
+.collections {
+    display: flexbox;
+    overflow: hidden;
+    width: 50vw
+}
+

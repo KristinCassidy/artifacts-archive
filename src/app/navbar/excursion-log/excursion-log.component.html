@@ -1,24 +1,88 @@
-<div class="container-fluid">
-    <h4>Excursions:</h4>
+   
 
-    <div class="excursion-page">
-        <table class="table">
+   <h4>Excursions:</h4>
+<div class="excursion-page">
+
+    <div class="excursion-table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Date/Time</th>
-                    <th>Conditions</th>
-                    <th>Notes</th>
-                    <th>Notes</th>
-                    <th>Notes</th>
-                    <th>Notes</th>
-                    <th>Notes</th>
+                    <th colspan="1">Date</th>
+                    <th colspan="3">Time</th>
+                    <th colspan="2">Conditions </th>
+                    <th colspan="2">Location</th>
+                    <th colspan="3">Notes</th>
+                </tr>
+                <tr>
+                    <th></th>
+
+                    <th>Start:</th>
+                    <th>End:</th>
+                    <th>Total:</th>
+
+                    <th>River Level:</th>
+                    <th>Weather</th>
+
+                    <th>Name</th>
+                    <th>Coordinates</th>
+
+                    <th>Trip</th>
+                    <th>General Finds</th>
+                    <th>Notable Finds</th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td scope="row"></td>
+                    <td>{{ excursionDemo.date | date }}</td>
+
+                    <td>{{ excursionDemo.startTime }}</td>
+                    <td>{{ excursionDemo.endTime }}</td>
+                    <td>{{ excursionDemo.totalTime }}</td>
+
+                    <td>{{ excursionDemo.riverLevel }}</td>
+                    <td>{{ excursionDemo.temp }} {{ excursionDemo.conditions }}</td>
+                   
+
+                    <td>St. Louis</td>
+                    <td>{{ excursionDemo.coordinates }}</td>
+
+                    <td>{{ excursionDemo.notes }}</td>
+
+                    <td>
+                        <ul>
+                            <li *ngFor="let item of excursionDemo.generalFinds">{{item}}</li>
+                        </ul>
+                    </td>
+                    <td>{{ excursionDemo.notableFinds }}</td>     
+                </tr>
+                <tr>
                     <td></td>
+
+                    <td>1pm</td>
+                    <td>6pm</td>
+                    <td>5hrs</td>
+
+                    <td>17.72ft</td>
                     <td></td>
+                   
+
+                    <td>St. Louis</td>
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                        <ul>
+                            <li *ngFor="let item of excursionDemo2">{{item}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let item of excursionDemo3">{{item}}</li>
+                        </ul>
+                    </td>
+
                 </tr>
                 <tr>
                     <td scope="row"></td>
@@ -27,10 +91,21 @@
                 </tr>
             </tbody>
         </table>
-        <hr>
-        <div class="container-fluid" style="border: 1px solid">
-            <h3>Current Conditions: </h3>
-            <app-river-level></app-river-level>
-        </div>
     </div>
+
 </div>
+
+<!-- class Excursion {
+    public date: string;
+    public startTime: string;
+    public endTime: string;
+    public totalTime: string;
+    public riverLevel: string;
+    public conditions: string;
+    public location: string;
+    public coordinates: string;
+    public notes: [];
+    public notableFinds: [];
+    public attendence: string;
+    public imagePath: string;
+    public wildLife: []; -->

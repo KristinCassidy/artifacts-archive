@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { CollectionsComponent } from './navbar/collections/collections.component';
 import { HomeComponent }  from './navbar/home/home.component';
-import { ArtifactComponent } from './navbar/collections/artifact/artifact.component';
 import { ProfileComponent } from './navbar/profile/profile.component';
 import { ExcursionLogComponent } from './navbar/excursion-log/excursion-log.component';
 import { AddArtifactComponent } from './navbar/collections/artifact/add-artifact/add-artifact.component';
