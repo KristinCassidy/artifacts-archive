@@ -8,11 +8,6 @@ import { Collection } from './collection/collection.model';
   host: {'class': 'container-fluid'}
 })
 export class CollectionsComponent implements OnInit {
-  collections: Collection[] =[
-    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
-    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
-    // new Collection('Keys', 'Collection Test-Description','../..src/assets/keys/key-2.jpg'),
-  ];
 
   constructor() { }
 
