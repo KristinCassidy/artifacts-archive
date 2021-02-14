@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SubheaderComponent } from './subheader.component';
 
-describe('SubheaderComponent', () => {
+describe('Component: Subheader', () => {
   let component: SubheaderComponent;
   let fixture: ComponentFixture<SubheaderComponent>;
 
