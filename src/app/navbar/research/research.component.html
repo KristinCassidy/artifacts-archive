@@ -1,21 +1,105 @@
 
-<div class="artifact-links">
-    <h5>Research Links:</h5>
-    <a *ngFor="let link of researchLinks; let i = index"
-  style="cursor: pointer;"
-  routerLinkActive="active"
-  class="list-group-item clearfix">
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ link.title }}</h4>
-    <p class="list-group-item-text">{{ link.description }}</p>
-  </div>
-  <span class="pull-right">
-        <img
-          [src]="link.imagePath"
-          alt="{{ link.title }}"
-          class="img-responsive"
-          style="max-height: 50px">
-      </span>
-</a>
+<div class="container-fluid">
 
+    <div class="subheader">
+        <div class="collection-name">   
+           <h4>Research:</h4>   
+        </div>
+        <div class="edit-icons">
+            <a class="add">
+                <img src="assets/icons/add.png" alt="">
+            </a>
+            <a class="edit">
+                <img src="assets/icons/icon-edit_24px.svg">
+            </a>
+        </div>
+    </div>
+<div class="container-fluid">
+    <nav>
+        <div class="navbar">
+            
+        </div>
+    </nav>
+</div>
+
+    <div class="artifact-links">
+        <div class="artifacts">
+            <h5>Research Links:</h5>
+                <a *ngFor="let link of researchLinks; let i = index"
+            style="cursor: pointer;"
+            routerLinkActive="active"
+            class="list-group-item clearfix" [href]="link.linkUrl">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ link.title }}</h4>
+                <p class="list-group-item-text">{{ link.description }}</p>
+            </div>
+            <span class="pull-right">
+                    <img
+                    [src]="link.imagePath"
+                    alt="{{ link.title }}"
+                    class="img-responsive"
+                    style="max-height: 50px">
+                </span>
+            </a>
+        </div>
+
+        <div class="nativeAmericanArtifacts">
+            <h5>Native American Artifact Links:</h5>
+                <a *ngFor="let link of nativeAmericanArtifacts; let i = index"
+                style="cursor: pointer;"
+                routerLinkActive="active"
+                class="list-group-item clearfix" [href]="link.linkUrl">
+                <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ link.title }}</h4>
+                <p class="list-group-item-text">{{ link.description }}</p>
+                </div>
+                <span class="pull-right">
+                    <img
+                    [src]="link.imagePath"
+                    alt="{{ link.title }}"
+                    class="img-responsive"
+                    style="max-height: 50px">
+                </span>
+                </a>
+        </div>
+        <div class="cleaning">
+            <h5>Cleaning Technique Links:</h5>
+                <a *ngFor="let link of cleaningLinks; let i = index"
+                style="cursor: pointer;"
+                routerLinkActive="active"
+                class="list-group-item clearfix" [href]="link.linkUrl">
+                <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ link.title }}</h4>
+                <p class="list-group-item-text">{{ link.description }}</p>
+                </div>
+                <span class="pull-right">
+                    <img
+                    [src]="link.imagePath"
+                    alt="{{ link.title }}"
+                    class="img-responsive"
+                    style="max-height: 50px">
+                </span>
+                </a>
+        </div>
+        <div class="archiving">
+            <h5>Archiving Technique Links:</h5>
+                <a *ngFor="let link of archiving; let i = index"
+                style="cursor: pointer;"
+                
+                class="list-group-item clearfix" [href]="link.linkUrl">
+                <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ link.title }}</h4>
+                <p class="list-group-item-text">{{ link.description }}</p>
+                </div>
+                <span class="pull-right">
+                    <img
+                    [src]="link.imagePath"
+                    alt="{{ link.title }}"
+                    class="img-responsive"
+                    style="max-height: 50px">
+                </span>
+                </a>
+        </div>
+
+    </div>
 </div>

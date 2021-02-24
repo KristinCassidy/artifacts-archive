@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Collection } from './collection/collection.model';
+import { Collection } from '../../models/collection.model';
 
 @Component({
-  selector: 'app-collections',
-  templateUrl: './collections.component.html',
-  styleUrls: ['./collections.component.css'],
-  host: {'class': 'container-fluid'}
+    selector: 'app-collections',
+    template: `<div class="container-fluid">
+                    <router-outlet></router-outlet>
+               </div>`,
+    styles: [''],
+    host: {'class': 'container-fluid'}
 })
+
 export class CollectionsComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {}
 
 }

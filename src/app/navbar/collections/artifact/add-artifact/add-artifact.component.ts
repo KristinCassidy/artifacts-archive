@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { CollectionService } from '../../collection/collection.service';
+import { CollectionService } from '../../../../services/collection.service';
 import { map } from 'rxjs/operators';
-import { Collection } from '../../collection/collection.model';
-import { Artifact } from '../artifact.model';
+import { Collection } from '../../../../models/collection.model';
+import { Artifact } from '../../../../models/artifact.model';
 
 @Component({
   selector: 'app-add-artifact',
@@ -14,12 +14,17 @@ import { Artifact } from '../artifact.model';
 export class AddArtifactComponent implements OnInit {
   addArtifact: FormGroup;
   collections;
+  materials: String[];
+  ceramics: String[];
+  controls;
 
  
   constructor(private formBuilder:FormBuilder,
               private collectionService: CollectionService,
               private http: HttpClient) {
-      this.collections = this.collectionService.getCollections(); 
+      
+      
+      // this. ceramics = ['Porcelain','Fine Earthenware', 'Corse Earthenware', 'Stoneware'];
     }
 
   ngOnInit() {
@@ -32,14 +37,16 @@ export class AddArtifactComponent implements OnInit {
       'image': new FormControl (null),
       'keywords': new FormArray([])
       });
+      this.collections = this.collectionService.getCollections(); 
+      this.materials = ['Ceramic', 'Glass', 'Metal', 'Plastic', 'Stone', 'Organic','Other'];
   }
   
-  onSubmit(form: NgForm) {
-    this.http.post('https://artifacts-archive-default-rtdb.firebaseio.com/artifacts.json', 
-    this.addArtifact
-     ).subscribe( (responseData) => {
-      console.log(responseData);
-   })
+  onSubmit(formData: {title: string, collection: string, age: string, material: string, desc: string, image: string, keywords: [] }) {
+    this.http.post('https://artifacts-archive-default-rtdb.firebaseio.com/artifacts.json', formData);
+    // this.addArtifact
+    //  ).subscribe( (responseData) => {
+    //   console.log(responseData);
+  //  })
    this.addArtifact.reset();
   }
 
@@ -52,18 +59,18 @@ export class AddArtifactComponent implements OnInit {
    (<FormArray>this.addArtifact.get('keywords')).push(control);
   }
 
-  private fetchArtifacts() {
-    this.http.get('https://artifacts-archive-default-rtdb.firebaseio.com/artifacts.json')
-    .pipe(map(responseData => {
-      const artifactsArray = [];
-        for (const key in responseData) {
-          if(responseData.hasOwnProperty(key)) {
-            artifactsArray.push({...responseData[key], index: key });
-          }
-        }
-        return artifactsArray;
-    }))
+  // private fetchArtifacts() {
+  //   this.http.get('https://artifacts-archive-default-rtdb.firebaseio.com/artifacts.json')
+  //   .pipe(map(responseData => {
+  //     const artifactsArray = [];
+  //       for (const key in responseData) {
+  //         if(responseData.hasOwnProperty(key)) {
+  //           artifactsArray.push({...responseData[key], index: key });
+  //         }
+  //       }
+  //       return artifactsArray;
+  //   }))
     
-  }
+  // }
 }
 

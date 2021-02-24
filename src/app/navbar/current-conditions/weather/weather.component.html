@@ -1,0 +1,93 @@
+<div class="container-fluid">  
+    <div class="weatherData">
+
+        <div class="row">
+            <div class="col-xs-4">
+                <h1>{{ temp }}&#8457;</h1>
+                <h4>{{ condition }}</h4>
+            </div>
+            <div class="col-xs-3">
+                <img style="height:100px" src="{{ icon }}" alt="{{ condition }}">
+            </div>
+            <div class="col-xs-5">
+                <h5>{{ date | date: "MMMM dd, yyyy" }}</h5>
+                <h5>{{ date | date: "shortTime"}}</h5>
+                <h4>High</h4>
+                <h4>Low</h4>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-xs-5">
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-5">
+                <h6>Feels Like: <strong>{{ feelsLike }} &#8457;</strong></h6>
+                <h6>cloud: {{cloud}}</h6>
+                <h6>wind: {{wind}}mph</h6>
+                <h6>Avg temp: {{avgTemp}} &#8457;</h6>
+                <h6>Max temp: {{maxTemp}} &#8457;</h6>
+                <h6>Min temp: {{minTemp}} &#8457;</h6>
+                
+            </div>
+            <div class="col-xs-7">
+               
+                <h6>Moon Phase: {{moonPhase}}</h6>
+                <h5> <i class="bi bi-sunrise"></i> sunrise: {{sunrise}}</h5>
+                <h6> <i class="bi bi-sunset-fill"></i> sunset: {{sunset}}</h6>
+                
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+                <p>icon high low </p>
+            </div>
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+            </div>
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+            </div>
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+            </div>
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+            </div>
+            <div class="col-xs-2">
+                <h5>forcast</h5> 
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="row">
+            <div 
+                class="col-xs-1" 
+                *ngFor="let hour of todaysForcastArray; let i = index"
+                [ngStyle]="{
+                    backgroundColor: hour.is_day ? ' rgba(104, 104, 104, 0.104)':' rgba(85, 85, 85, 0.400)',
+                    color: !hour.is_day ? 'white' : 'rgba(85, 85, 85, 0.800)' }">
+                
+                    <h5>{{hour.time | date: "ha" }}</h5>
+                    <img class="forecastImg" src="{{hour.condition.icon}}" alt="{{hour.condition.text}}">
+                    <!-- <i class="{{ getIcon() }}"></i> -->
+                    <h6>{{hour.temp_f}}&#8457;</h6>
+                
+            </div>
+        
+    </div>
+    <div>
+        
+    </div>
+
+</div>

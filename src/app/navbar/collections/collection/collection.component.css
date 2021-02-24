@@ -9,20 +9,13 @@ img {
 }
 
 h4 {
-    /* font-family: COURIER NEW; */
     font-family: COURIER;
-   
-    /* font-family: MONOSPACE; */
     color:rgba(85, 85, 85, 0.671);
 }
 
-.edit-ions {
+.edit-icons {
     display:flexbox;
     position: relative;
-    /* margin: 0 3vw 2vw 0; */
-    /* border-radius: 50%; */
-    /* outline: solid 1px; */
-    
 }
 
 .edit {
@@ -53,7 +46,7 @@ h4 {
     padding: 0.2em 0 0 0.5em;
 }
 
-.artifact-thumbnail {
+/* .artifact-thumbnail {
     height: 20vw;
     width: 15vw;
     background-image: url(".././../../../assets/keys/key-7.jpg");
@@ -61,9 +54,9 @@ h4 {
     background-repeat: no-repeat;
     background-position: center;
 
-}
+} */
 
-.artifact-preview {
+/* .artifact-preview {
     text-align: center;
     color: rgba(104, 104, 104, 0.575);
     display: flexbox;
@@ -71,7 +64,7 @@ h4 {
     outline: solid 1px;
     padding: 0.8em;
     margin: 1em;
-}
+} */
 
 
 .artifact-gallery {

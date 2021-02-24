@@ -5,32 +5,22 @@ i {
     font-size: 1.5em;
     color: $myColor;
     vertical-align: middle;
-    position: relative;
+    padding: unset;
 }
 
 i:hover {
-    color: black;
-    
+    color: black; 
 }
 
 a:hover {
     cursor: pointer;
 }
 
-.subheader {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    position: stretch;
-    margin: -0.5em 0 0 0;
-    padding-bottom: 0.4em;
+#right {
+    text-align: right;
 
 }
 
-.forward {
-    display: flexbox;
-}
-
-.back {
-    display: flexbox;
+#left {
+    text-align: left;
 }

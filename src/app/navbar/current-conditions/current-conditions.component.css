@@ -1,0 +1,14 @@
+
+.wrapper {
+    font-family: Helvetica Neue;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+h5 {
+    font-family: courier;
+    color: rgba(85, 85, 85, 0.671);
+    /* color: rgba(104, 104, 104, 0.404); */
+}
+
+

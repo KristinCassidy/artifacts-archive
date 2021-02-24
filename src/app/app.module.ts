@@ -19,11 +19,15 @@ import { ResearchComponent } from './navbar/research/research.component';
 import { CollectionComponent } from './navbar/collections/collection/collection.component';
 import { CollectionPreviewComponent } from './navbar/collections/collection/collection-preview/collection-preview.component';
 import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
-import { CollectionService } from './navbar/collections/collection/collection.service';
+import { CollectionService } from './services/collection.service';
 import { CollectionEditComponent } from './navbar/collections/collection/collection-edit/collection-edit.component';
-import { RiverLevelComponent } from './navbar/excursion-log/current-conditions/river-level/river-level.component';
-import { RiverLevelService } from './navbar/excursion-log/current-conditions/river-level/river-level.service';
+import { RiverLevelComponent } from './navbar/current-conditions/river-level/river-level.component';
+import { RiverLevelService } from './services/river-level.service';
 import { SubheaderComponent } from './header/subheader/subheader.component';
+import { IdentificationComponent } from './navbar/research/identification/identification.component';
+import { CurrentConditionsComponent } from './navbar/current-conditions/current-conditions.component';
+import { WeatherService } from './services/weather.service';
+import { WeatherComponent } from './navbar/current-conditions/weather/weather.component';
 
 
 @NgModule({
@@ -46,6 +50,9 @@ import { SubheaderComponent } from './header/subheader/subheader.component';
     RiverLevelComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    IdentificationComponent,
+    CurrentConditionsComponent,
+    WeatherComponent,
     
   ],
   imports: [
@@ -55,7 +62,7 @@ import { SubheaderComponent } from './header/subheader/subheader.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ CollectionService, RiverLevelService ],
+  providers: [ CollectionService, RiverLevelService, WeatherService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

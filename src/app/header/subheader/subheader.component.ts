@@ -4,11 +4,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-subheader',
   templateUrl: './subheader.component.html',
   styleUrls: ['./subheader.component.scss'],
-  // host: {'class': 'container-fluid'}
+  host: {'class': 'container-fluid'}
 })
 export class SubheaderComponent implements OnInit {
+pageTitle: string;
 
-  constructor() { }
+  constructor() { 
+    // this.pageTitle = 
+  }
 
   ngOnInit(): void {
   }

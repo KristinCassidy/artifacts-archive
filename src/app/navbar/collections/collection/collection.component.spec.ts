@@ -1,7 +1,7 @@
 import { ComponentFixture,TestBed } from '@angular/core/testing';
 
 import { CollectionComponent } from './collection.component';
-import { CollectionService } from './collection.service';
+import { CollectionService } from '../../../services/collection.service';
 
 // describe('Component: Collection', () => {
 //   beforeEach(() => {

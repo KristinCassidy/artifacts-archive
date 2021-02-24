@@ -4,6 +4,7 @@
         <div class="navbar-header navbar-left">
             <a class="navbar-brand">
                 <img (click)="onToggle($event)" 
+                    style="height:0.6em;"
                     role="button" 
                     src="/assets/menu.png" 
                     alt="menu button">
@@ -21,7 +22,7 @@
                     data-toggle="collapse" 
                     data-target="#searchBar" 
                     type="submit">
-                    <i id="search" class="bi bi-search"></i>
+                    <i id="search" class="bi bi-search icon-flipped"></i>
                 </button>
                 <div 
                     *ngIf="openSearch" 
@@ -37,3 +38,4 @@
            
     </div>
 </nav>
+

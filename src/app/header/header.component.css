@@ -5,6 +5,7 @@ nav {
     background: none;
     padding: 1vh 1vh 1vh 3vh;
     transition: all 0.3s;
+    margin-bottom: 0;
 }
 
 a {
@@ -33,13 +34,6 @@ button:focus {
     outline: white;
 }
 
-img {
-    height:0.6em;
-
-}
-
 img:hover {
     cursor: pointer;
 }
-
-

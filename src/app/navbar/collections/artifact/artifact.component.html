@@ -1,11 +1,14 @@
-
 <div class="artifact-preview">
+    <div>
+        <a routerLink="/artifact" >
+            <div
+                [ngStyle]="{ backgroundImage: getImage()}"
+                class="artifact-thumbnail">
+            </div>
+        </a>
+    </div>
 
-    <a routerLink="artifact">
-        <div 
-            [ngStyle]="{ backgroundImage: getImage()}"
-            class="artifact-thumbnail">
-        </div>
-    </a>
-
+    <!-- <div>
+        <app-artifact-profile></app-artifact-profile>
+    </div> -->
 </div>

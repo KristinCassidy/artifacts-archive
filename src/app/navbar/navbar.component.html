@@ -18,7 +18,8 @@
                         data-toggle="collapse" 
                         class="dropdown-toggle"
                         aria-expanded="false" 
-                        (click)="showCollectionsSubMenu = !showCollectionsSubMenu; showResearchSubMenu = false">Collections +</a>
+                        (click)="showCollectionsSubMenu = !showCollectionsSubMenu; showResearchSubMenu = false">Collections +
+                    </a>
                     
                             <!-- Sub-Menu -->
                                     <ul *ngIf="showCollectionsSubMenu" 
@@ -148,12 +149,16 @@
 
     
     <!-- Page Content -->
-    <div id="content">
-            <div class="container-fluid">
-                <app-subheader></app-subheader>
+    <div 
+        id="content" 
+        class="container-fluid"
+        style="padding: 0 -15px">
+        <app-subheader></app-subheader>
+            <div 
+                id="outlet" 
+                class="container-fluid">   
                 <router-outlet></router-outlet>
             </div>
-       
     </div>
 
 </div>   

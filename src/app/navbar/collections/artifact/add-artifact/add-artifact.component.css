@@ -6,3 +6,12 @@ select.ng-invalid.ng-touched {
     border: 1px solid red;
 }
 
+form {
+    width: 80%;
+    background-color: whitesmoke;
+    padding: 0.5em;
+}
+
+button {
+    margin: 0 0.5em;
+}

@@ -30,4 +30,39 @@
     margin: 1em;
 }
 
+.add {
+    margin-right: 1.4em;
+} 
 
+.add:hover {
+    cursor: pointer;
+    opacity: 0.308;
+}
+
+.edit-icons {
+    display:flexbox;
+    position: relative;
+}
+
+.edit {
+    outline-offset: 0.3em;
+}
+
+.edit:hover {
+    cursor: pointer;
+    opacity: 0.308;
+}
+
+img {
+    height: 1.6em; 
+ }
+
+ .subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.2em 0 0 0.5em;
+}

@@ -1,46 +1,29 @@
 <!-- <div class="container-fluid"> -->
-    <h4>Collection: </h4>
-    <div class="artifacts-gallery">
-        <div class="subheader">
-            <div class="collection-name">
-               
-               <h2>{{ collection.name }}</h2>
-                
-            </div>
-            <div class="edit-icons">
-                <a class="add" (click)="onAddArtifact()">
-                    <img src="assets/icons/add.png" alt="">
-                </a>
-                <a class="edit" (click)="onEditCollection()">
-                    <img src="assets/icons/icon-edit_24px.svg">
-                </a>
-            </div>
+<h4>Collection: </h4>
+<div class="artifacts-gallery">
+    <div class="subheader">
+        <div class="collection-name">               
+            <h2>{{ collection.name }}</h2>               
         </div>
-    
-        <div class="artifact-gallery">
-        <!-- insert artifact images here -->
-            <app-artifact
-                *ngFor="let item of collection.artifacts; let i = index;"
-                [artifact]="item"
-                [index]="i"
-                (click)="onArtifactProfile()"
-                ></app-artifact>
-        </div> 
-       
+        <div class="edit-icons">
+            <a class="add" (click)="onAddArtifact()">
+                <img src="assets/icons/add.png" alt="">
+            </a>
+            <a class="edit" (click)="onEditCollection()">
+                <img src="assets/icons/icon-edit_24px.svg">
+            </a>
+        </div>
     </div>
- 
+    
+    <div class="artifact-gallery">
+        <!-- insert artifact images here -->
+        <app-artifact
+            *ngFor="let item of collection.artifacts; let i = index;"
+            [artifact]="item"
+            [index]="i"
+            ></app-artifact>
+    </div>       
+</div>
 
-<!-- </div> -->
 
-
-<!-- <div class="container-fluid">
-    <div class="collection-gallery">
- 
-        <app-collection-preview 
-            *ngFor="let collectionPreview of collections; let i = index"
-            [collection]="collectionPreview"
-            [index]="i"></app-collection-preview>
-  
-     </div>
-</div> -->
 

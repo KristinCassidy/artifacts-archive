@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
     width: 100%;
+    height: fit-content;
 }
 
 #sidebar {
@@ -9,9 +10,9 @@
     bottom: 0px;
     min-width: 200px;
     max-width: 200px;
-    height: 100vh;
+    min-height: 100vh;
     border-right: 1px solid rgba(0, 0, 0, 0);
-    margin-top: -19px;
+    margin-top: 1px;
     background: rgba(0, 0, 0, 0.308);
     color: rgb(255, 255, 255);
     transition: all 0.3s;
@@ -98,4 +99,19 @@ hr {
     width: 200px;
     background-color: rgba(48, 48, 48, 0.87);
 
+}
+
+#content {
+    width: 100%;
+}
+
+#outlet {
+    width: 100%;
+    margin: unset;
+}
+
+.submenu {
+    display: relative;
+    width: 0.6em;
+    /* bottom: 10px; */
 }

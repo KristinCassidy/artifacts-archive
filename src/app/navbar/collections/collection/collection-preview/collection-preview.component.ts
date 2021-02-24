@@ -1,25 +1,26 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Collection } from '../collection.model';
+import { Collection } from '../../../../models/collection.model';
 
 @Component({
-  selector: 'app-collection-preview',
-  templateUrl: './collection-preview.component.html',
-  styleUrls: ['./collection-preview.component.css'],
-  host: {'class': 'collection-gallery'}
+	selector: 'app-collection-preview',
+	templateUrl: './collection-preview.component.html',
+
+	styleUrls: ['./collection-preview.component.css'],
+	host: {'class': 'collection-gallery'}
 })
 export class CollectionPreviewComponent implements OnInit {
-  @Input() collection: Collection;
-  @Input() index: number;
+	@Input() collection: Collection;
+	@Input() index: number;
 
-  constructor(private route: ActivatedRoute) { }
+	constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  getImage() {
-    return `url(${this.collection.imagePath})`;
-  }
+	getImage() {
+		return `url(${this.collection.imagePath})`;
+	}
 
 }

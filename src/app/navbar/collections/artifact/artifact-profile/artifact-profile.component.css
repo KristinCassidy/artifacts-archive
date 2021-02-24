@@ -1,42 +1,64 @@
 .main-image {
-    width: 40%;
-    border: 1px solid rgba(128, 128, 128, 0.164);
+    display: flexbox;
+    width: 20vw;
+    margin: 2%;
+    /* border: 1px solid rgba(128, 128, 128, 0.164); */
 }
 
 .artifact-info-container{
     display: flex;
-    margin: 1em;
-
+    margin: 0 1em;
+    /* background-color: whitesmoke; */
 }
+
 .artifact-info {
     display: flexbox;
-    width: stretch;
-    padding: 1em 4em 2em 4em;
-    /* outline: solid; */
-    
-}
-
-/* .title {
-    
-} */
-
-table {
-    column-gap: 3em;
-}
-
-td {
-    padding: 0.2em 1em;
+    padding: 1em 1em 1em 1em;
+    /* background-color: white; */
 }
 
 .more-images {
-    outline: solid;
-    display: flexbox;
-    height: 10em;
-    width: 38%;
-    margin: 2em 5em 1em 1em;
+    outline: solid 1px;
+    display: flex;
+    /* min-height: 10em; */
+    max-width: fit-content;
+    margin: 1em 1em 1em 0;
 }
 
-ul {
-    outline: solid;
+input {
+    max-width: 12em;
 }
 
+.artifact-thumbnail {
+    height: 110px;
+    width: 80px;
+    background-image: url("/assets/keys/key-7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.artifact-preview {
+    /* text-align: center; */
+    /* color: rgba(104, 104, 104, 0.575); */
+    display: flexbox !important;
+    width: max-content;
+    /* outline: solid 1px; */
+    border: 2px solid rgba(0, 0, 0, 0.199);
+    padding: 0.3em;
+    margin: 0.5em;
+}
+
+img {
+    width: 30vw;
+    outline: solid 1px;
+}
+
+div {
+    outline: solid 1px;
+}
+
+.container {
+    width: 60vw
+}

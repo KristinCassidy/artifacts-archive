@@ -1,100 +1,187 @@
 
+
 <h3>New Item/ Add Item to Archive</h3>
-<hr>
-<div class="container-fluid">
-    <form  [formGroup]="addArtifact" (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <div formGrouplName="artifactData">
-            <div class="form-group">
-                <label for="title">Title: </label>
-                    <input 
-                        type="text"
-                        id="title"
-                        formControlName="title"
-                        class="form-control">
-                <span
-                    *ngIf="!addArtifact.get('title').valid && addArtifact.get('title').touched;"
-                        class="help-block">Please enter a valid title!</span>
-            </div>
-            <div class="form-group">
-                <label for="collection">Collection: </label>
-                <select 
-                    class="custom-select form-control" 
-                    style="cursor: pointer" 
-                    formControlName="collection" 
-                    id="collection">
-                    <option *ngFor="let collection of collections"
-                         value="{{ collection.name }}">{{collection.name}}
-                    </option>
-                </select>
-                <span 
-                    *ngIf="!addArtifact.get('collection').valid && addArtifact.get('collection').touched;"
-                    class="help-block">Please select a collection!</span>
-            </div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 colmd-offset-2">
+			<form>
+				<div id=""></div>
+			</form>
 
-            <div class="form-group">
-                <label for="age">Year: </label>
-                    <input 
-                        type="number"
-                        id="age"
-                        formControlName="age"
-                        class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="material">Marerial: </label>
-                    <select class="custom-select form-control" style="cursor: pointer" formControlName="material" id="material">
-                        <option value="ceramic">Ceramic</option>
-                        <option value="glass">Glass</option>
-                        <option value="metal">Metal</option>
-                        <option value="plastic">Plastic</option>
-                        <option value="stone">Stone</option>
-                        <option value="other">Other</option>
-                    </select>
-            </div>
-            <div class="form-group">
-                <label for="description">Description: </label>
-                    <textarea
-                        class="form-control"
-                        id="description"
-                        formControlName="desc"
-                    ></textarea>
-            </div>
-            <div formArrayName="keywords">
-                <h4>Keywords: </h4>
-                <button 
-                    class="btn btn-default" 
-                    type="button" 
-                    (click)="onAddKeyword()">Add Keyword</button>
-                <!-- <div
-                    class="form-group"
-                    *ngFor="let keywordControl of addArtifact.get('keywords').controls; let i = index">
-                        <input type="text" class="form-control" [formControlName]="i">
-                </div> -->
-            </div>
-
-
-        </div>
-        <span *ngIf="!addArtifact.valid && addArtifact.touched" class="help-block">Please enter valid data!</span>
-        <button type="submit" class="btn btn-default">Submit</button>
-        
-        <button type="reset" class="btn btn-default"(click)="onReset()">Reset</button>
-    </form>
+		</div>
+	</div>
 </div>
 
+<hr>
+<div class="container-fluid">
+
+	<form  [formGroup]="addArtifact">
+		<div formGrouplName="artifactData" class="form-group container-fluid">
+			<div class="row-xs-12">
+				<div class="col-6">
+					<label for="title">Title: </label>
+					<input 
+						type="text"
+						class="form-control">
+				</div>
+				<div class="col-6">
+					<label for="title">Title: </label>
+					<input 
+						type="text"
+						class="form-control">
+				</div>
+			</div>
+
+			<ul class="list-unstyled">
+				<li class="form-group">
+				    <label for="title">Title: </label>
+				    <input 
+						type="text"
+				   		class="form-control">
+				</li>
+				<li class="form-group"> 
+					<label for="date found">Date Found:</label>
+					<input 
+						type="date"
+						class="form-control">
+				</li>
+				<li class="form-group"> 
+					<label for="age">Age: </label>
+					<input 
+						type="text"
+						class="form-control">
+				</li>
+				<li class="form-group">
+					<label for="keywords">Keywords: </label>
+					<input 
+						type="text"
+						class="form-control">
+				</li>
+			</ul>
+
+		</div>
+	</form>
+</div>
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+			<!-- <div>
+				<label for="title">Title: </label>
+					<input 
+						type="text"
+						id="title"
+						formControlName="title">
+				<span
+					*ngIf="!addArtifact.get('title').valid && addArtifact.get('title').touched;"
+						class="help-block">Please enter a valid title!</span>
+			</div>
+			<div>
+				<label for="collection">Collection: </label>
+				<select 
+					class="custom-select" 
+					style="cursor: pointer" 
+					formControlName="collection" 
+					id="collection" >
+					<option value= "Keys">Keys</option>
+					<option value= "Marbles">Marbles</option>
+					<option value= "Gears">Gears</option>
+					<option value= "Spoons">Spoons</option>
+					<option value= "Buttons">Buttons</option>
+					<option value= "Bottle Stoppers">Bottle Stoppers</option>
+					<option value= "Miscellaneous">Miscellaneous</option>
+					<option value= "Other">Other</option>
+
+					<option *ngFor="let collection of collections"
+						 value="{{ collection.name }}">{{ collection.name }}
+					</option>
+				</select>
+				<span 
+					*ngIf="!addArtifact.get('collection').valid && addArtifact.get('collection').touched;"
+					class="help-block">Please select a collection!</span>
+			</div>
+
+			<div>
+				<label for="age">Year: </label>
+					<input 
+						type="number"
+						id="age"
+						formControlName="age">
+			</div> -->
+
+							<!-- <div class="form-group">
+								<label for="material">Marerial: </label>
+									<select class="custom-select form-control" style="cursor: pointer" formControlName="material" id="material">
+										<option value= "Glass">Glass</option>
+										<option value= "Ceramic">Ceramic</option>
+										<option value= "Stone">Stone</option>
+										<option value= "Metal">Metal</option>
+										<option value= "Organic">Organic</option>
+										<option value= "Plastic">Plastic</option>
+										<option value= "Other">Other</option>
+										<option  
+											*ngFor="let material of materials" value="{{ material }}">{{ material}}</option>
+									</select> -->
+												<!-- <div class="form-group">
+													<select name="ceramic" id="ceramic">
+														<option *ngFor="let ceramic of ceramics">{{ceramic}}</option>
+													</select>
+												</div> -->
+							<!-- </div> -->
+			<!-- <div>
+				<label for="description">Description: </label>
+					<textarea
+						id="description"
+						formControlName="desc"
+					></textarea>
+			</div>
+			<div formArrayName="keywords">
+				<label for="keywords">Keywords: </label>
+				<div 
+					id="keywords"
+					*ngFor="let keywordControl of addArtifact.get('keywords'); let i = index">
+					<input type="text" [formControlName]="i">
+				</div>
+				<button 
+					class="btn-sm" 
+					type="button" 
+					(click)="onAddKeyword()">Add +
+				</button>
+   
+			</div>
+
+
+		</div>
+		<span *ngIf="!addArtifact.valid && addArtifact.get('submit').touched" class="help-block">Please enter valid data!</span>
+		<button type="submit" class="btn btn-default">Submit</button>
+		
+		<button type="reset" class="btn btn-default"(click)="onReset()">Reset</button>
+	</form>
+</div> -->
+
 <!----
-      'title': new FormControl(null, Validators.required),
-      'collection': new FormControl(null),
-      'age': new FormControl(null),
-      'material': new FormControl(null),
-      'color': new FormControl(null),
-      'weight': new FormControl(null),
-      'logos': new FormControl(null),
-      'desc': new FormControl(null),
-      'locationFound': new FormControl(null, Validators.required),
-      'dateFound': new FormControl(null),
-      'image': new FormControl(null),
-    }),
-    'research': new FormControl(null)
+	  'title': new FormControl(null, Validators.required),
+	  'collection': new FormControl(null),
+	  'age': new FormControl(null),
+	  'material': new FormControl(null),
+	  'color': new FormControl(null),
+	  'weight': new FormControl(null),
+	  'logos': new FormControl(null),
+	  'desc': new FormControl(null),
+	  'locationFound': new FormControl(null, Validators.required),
+	  'dateFound': new FormControl(null),
+	  'image': new FormControl(null),
+	}),
+	'research': new FormControl(null)
   })
 } -->
 
@@ -104,66 +191,66 @@
 
 
 <!-- <div class="panel">
-    <h4>Finds</h4>
-    <ul>
-        <li>material</li>
-        <li>type</li>
-        <li>approx. age(default=unverified)</li>
-        <li>color</li>
-        <li>size</li>
-        <li>weight</li>
-        <li>photos</li>
-        <li>deescription</li>
-            <ul>
-                <li>how it was found</li>
-                <li>what it looks like</li>
-            </ul>
-        <li>logos/ keywords</li>
-        <li>shape</li>
-    </ul>
+	<h4>Finds</h4>
+	<ul>
+		<li>material</li>
+		<li>type</li>
+		<li>approx. age(default=unverified)</li>
+		<li>color</li>
+		<li>size</li>
+		<li>weight</li>
+		<li>photos</li>
+		<li>deescription</li>
+			<ul>
+				<li>how it was found</li>
+				<li>what it looks like</li>
+			</ul>
+		<li>logos/ keywords</li>
+		<li>shape</li>
+	</ul>
 </div>
 
 <h3>Materials</h3>
 <ul>
-    <li>Metal</li> -->
-    <!-- Types:
-        gold
-        silver
-        copper
-        brass
-        bronze
-        steel
-        iron 
-        lead 
-        pewter 
-        nickel 
-        silverplate 
-        tin 
-        aluminum
-        unknown -->
+	<li>Metal</li> -->
+	<!-- Types:
+		gold
+		silver
+		copper
+		brass
+		bronze
+		steel
+		iron 
+		lead 
+		pewter 
+		nickel 
+		silverplate 
+		tin 
+		aluminum
+		unknown -->
 
-        <!-- [spoon, jewelry, lead figure, button, suspender clasp, coin, 
-        harmonica reed, letter press piece, bullet, squeeze top, chain, 
-        gear, lead sinker, decorative metal, pin, safety pin, cufflink, 
-        key, fishing hook, buckle, key hole, lock, nail, screw, handle, 
-        zipper-pull, lead tag] -->
+		<!-- [spoon, jewelry, lead figure, button, suspender clasp, coin, 
+		harmonica reed, letter press piece, bullet, squeeze top, chain, 
+		gear, lead sinker, decorative metal, pin, safety pin, cufflink, 
+		key, fishing hook, buckle, key hole, lock, nail, screw, handle, 
+		zipper-pull, lead tag] -->
 <!-- 
-    <li>Glass (Colors: Clear, Aqua, Lavander, Green, Blue, Brown)</li>
-        <ul>
-            <li>Marble</li>
-            <li>Bottle Stopper</li>
-            <li>Mason jar lid-liner</li>
-            <li>Bottle</li>
-            <li>Glass Shard</li>
-        </ul>
-    <li>Ceramic</li>
-        <ul>
-            <li>Porcelain</li>
-            <li>Terra Cotta</li>
-            <li>Stoneware</li>
-            <li>Earthenware</li>
-        </ul>
-    <li>Stone</li>
-    <li>Plastic</li>
-    <li>Organic</li>
+	<li>Glass (Colors: Clear, Aqua, Lavander, Green, Blue, Brown)</li>
+		<ul>
+			<li>Marble</li>
+			<li>Bottle Stopper</li>
+			<li>Mason jar lid-liner</li>
+			<li>Bottle</li>
+			<li>Glass Shard</li>
+		</ul>
+	<li>Ceramic</li>
+		<ul>
+			<li>Porcelain</li>
+			<li>Terra Cotta</li>
+			<li>Stoneware</li>
+			<li>Earthenware</li>
+		</ul>
+	<li>Stone</li>
+	<li>Plastic</li>
+	<li>Organic</li>
 </ul> -->
