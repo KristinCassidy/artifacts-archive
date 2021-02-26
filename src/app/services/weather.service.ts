@@ -8,7 +8,7 @@ import { Injectable } from "@angular/core";
 
 export class WeatherService {
     currentUrl: string = "http://api.weatherapi.com/v1/current.json?key=00364a6bd9b343fea3f74009211002&q=63101";
-    forecastUrl: string = "http://api.weatherapi.com/v1/forecast.json?key=00364a6bd9b343fea3f74009211002&q=63101&days=7";
+    forecastUrl: string = "http://api.weatherapi.com/v1/forecast.json?key=00364a6bd9b343fea3f74009211002&q=63101&days=10";
 
     constructor(public http: HttpClient){
     }

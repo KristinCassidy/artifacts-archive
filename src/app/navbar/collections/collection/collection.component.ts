@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Event, Params, Router } from '@angular/router';
 
 import { Artifact } from '../../../models/artifact.model';
 import { Collection } from '../../../models/collection.model';
@@ -48,6 +48,16 @@ export class CollectionComponent implements OnInit {
 
 	onArtifactProfile() {
 	 this.router.navigate(['artifact'], {relativeTo: this.route});
+	}
+
+	showInfo(event: Event) {
+			let info = document.getElementById("collectionInfo");
+			  if ( info.className !== "active") {
+				info.className = "active";
+			  } else {
+				info.className = "!active";
+			  };
+		  
 	}
 
 }

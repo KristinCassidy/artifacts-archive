@@ -3,17 +3,27 @@
 
         <div class="row">
             <div class="col-xs-4">
-                <h1>{{ temp }}&#8457;</h1>
+                <h1 style="font-weight:300;">{{ temp }}&#8457;</h1>
                 <h4>{{ condition }}</h4>
             </div>
             <div class="col-xs-3">
                 <img style="height:100px" src="{{ icon }}" alt="{{ condition }}">
+                <!-- <i style="font-size: 50px;" class="bi bi-sun"></i> -->
             </div>
             <div class="col-xs-5">
-                <h5>{{ date | date: "MMMM dd, yyyy" }}</h5>
-                <h5>{{ date | date: "shortTime"}}</h5>
-                <h4>High</h4>
-                <h4>Low</h4>
+                <h4 class="right">{{ date | date: "MMMM dd, yyyy" }}</h4>
+                <h4 class="right">{{ date | date: "EEEE" }}</h4>
+                <h5 class="right">{{ date | date: "shortTime"}}</h5>
+                <h4 class="right">High: 
+                    <i class="bi bi-thermometer-high"></i> 
+                    <!-- <img style="width:24px; opacity: 0.65;"src="assets/icons/thermometer-plus.svg" alt=""> -->
+                    {{ maxTemp }} &#8457;
+                </h4>
+                <h4 class="right">Low: 
+                    <i class="bi bi-thermometer-low"></i>
+                    <!-- <img style="width:24px; opacity: 0.65;"src="assets/icons/thermometer-minus.svg" alt=""> -->
+                    {{ minTemp }} &#8457;
+                </h4>
             </div>
         </div>
 
@@ -27,18 +37,21 @@
         <div class="row">
             <div class="col-xs-5">
                 <h6>Feels Like: <strong>{{ feelsLike }} &#8457;</strong></h6>
-                <h6>cloud: {{cloud}}</h6>
-                <h6>wind: {{wind}}mph</h6>
-                <h6>Avg temp: {{avgTemp}} &#8457;</h6>
-                <h6>Max temp: {{maxTemp}} &#8457;</h6>
-                <h6>Min temp: {{minTemp}} &#8457;</h6>
+                <h6>cloud: <strong>{{ cloud }} <i class="bi bi-clouds"></i></strong></h6>
+                <h6>wind: <strong>{{ wind }}mph </strong> <i class="bi bi-wind"></i></h6>
+                <h6>avg temp: <strong>{{ avgTemp }} &#8457;</strong></h6>
+                <h6>max temp: <strong>{{ maxTemp }} &#8457;</strong></h6>
+                <h6>min temp: <strong>{{ minTemp }} &#8457;</strong></h6>
+                
                 
             </div>
-            <div class="col-xs-7">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-4">
                
-                <h6>Moon Phase: {{moonPhase}}</h6>
-                <h5> <i class="bi bi-sunrise"></i> sunrise: {{sunrise}}</h5>
-                <h6> <i class="bi bi-sunset-fill"></i> sunset: {{sunset}}</h6>
+                <h6 class="right"> <i class="bi bi-mask"></i>
+                    Moon Phase: {{ moonPhase }}</h6>
+                <h4 class="right"> <i class="bi bi-sunrise"></i> {{ sunrise }}</h4>
+                <h4 class="right"> <i class="bi bi-sunset-fill"></i> {{ sunset }}</h4>
                 
             </div>
         </div>
@@ -46,9 +59,9 @@
 
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xs-2">
-                <h5>forcast</h5> 
+                <h5>Tomorrow</h5> 
                 <p>icon high low </p>
             </div>
             <div class="col-xs-2">
@@ -67,7 +80,7 @@
                 <h5>forcast</h5> 
             </div>
             
-        </div>
+        </div> -->
     </div>
 
     <div class="row">
@@ -78,10 +91,10 @@
                     backgroundColor: hour.is_day ? ' rgba(104, 104, 104, 0.104)':' rgba(85, 85, 85, 0.400)',
                     color: !hour.is_day ? 'white' : 'rgba(85, 85, 85, 0.800)' }">
                 
-                    <h5>{{hour.time | date: "ha" }}</h5>
-                    <img class="forecastImg" src="{{hour.condition.icon}}" alt="{{hour.condition.text}}">
+                    <h5 style="text-align: center;">{{ hour.time | date: "h a" }}</h5>
+                    <img style="text-align: center;"class="forecastImg" src="{{hour.condition.icon}}" alt="{{hour.condition.text}}">
                     <!-- <i class="{{ getIcon() }}"></i> -->
-                    <h6>{{hour.temp_f}}&#8457;</h6>
+                    <h6 style="text-align: center;">{{hour.temp_f}}&#8457;</h6>
                 
             </div>
         

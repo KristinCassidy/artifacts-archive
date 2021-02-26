@@ -25,6 +25,9 @@ import { WeatherService } from '../../../services/weather.service';
 		.col-xs-1 {
 			outline: solid 1px whitesmoke;
 		}
+		.right {
+			text-align: right;
+		}
 
   	`],
   	host: { 'class' : 'content'}
@@ -89,8 +92,8 @@ constructor( private weatherService: WeatherService ) { }
 				this.minTemp = this.today.day.mintemp_f;
 				this.hour = Number(this.getHour(this.date));
 				this.todaysForcastArray = this.getNextForecastHours(this.today.hour);
-				console.log(this.hour);
-				console.log(this.todaysForcastArray);
+				// console.log(this.hour);
+				// console.log(this.forecast.forecast.forecastday);
 			});
     }
 

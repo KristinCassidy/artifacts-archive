@@ -69,7 +69,6 @@ export class CollectionService {
         new Collection('Bottle Stoppers', 4, '', '/assets/bottle-stoppers/stopper-7.jpg',[]),
         new Collection('Harmonica Reeds', 5, '', '/assets/harmonica-reeds/harmonica-2.png',[]),
         new Collection('Buttons', 6, '', '/assets/buttons/button-4.jpg',[]),
-        // new Collection('Bottles', 7, '', '/assets/misc/bottle-1.jpg',[]),
         new Collection('Miscellaneous', 7, '', '/assets/misc/license-to-buttin.jpg',[]),
     ];
 

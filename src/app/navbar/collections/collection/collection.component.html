@@ -6,15 +6,23 @@
             <h2>{{ collection.name }}</h2>               
         </div>
         <div class="edit-icons">
+            <a class="add"
+            onclick="document.getElementById('collectionInfo').style.display='block'">
+
+                <img src="assets/icons/info-outline.svg" alt="">
+            </a>
             <a class="add" (click)="onAddArtifact()">
                 <img src="assets/icons/add.png" alt="">
             </a>
+  
             <a class="edit" (click)="onEditCollection()">
                 <img src="assets/icons/icon-edit_24px.svg">
             </a>
         </div>
     </div>
-    
+    <div id="collectionInfo" style='display:none'>
+hgvkgvk
+    </div>
     <div class="artifact-gallery">
         <!-- insert artifact images here -->
         <app-artifact

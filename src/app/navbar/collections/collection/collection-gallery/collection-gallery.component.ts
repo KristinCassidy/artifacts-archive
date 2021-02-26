@@ -15,6 +15,9 @@ import { CollectionService } from '../../../../services/collection.service';
 							<a class="add">
 								<img src="assets/icons/add.png" alt="">
 							</a>
+							<a>
+								<img src="assets/icons/info-outline.svg" alt="">
+							</a>
 							<a class="edit">
 								<img src="assets/icons/icon-edit_24px.svg">
 							</a>

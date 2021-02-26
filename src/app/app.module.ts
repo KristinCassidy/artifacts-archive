@@ -28,6 +28,7 @@ import { IdentificationComponent } from './navbar/research/identification/identi
 import { CurrentConditionsComponent } from './navbar/current-conditions/current-conditions.component';
 import { WeatherService } from './services/weather.service';
 import { WeatherComponent } from './navbar/current-conditions/weather/weather.component';
+import { ToggleDirective } from './services/dropdown.directive';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { WeatherComponent } from './navbar/current-conditions/weather/weather.co
     IdentificationComponent,
     CurrentConditionsComponent,
     WeatherComponent,
-    
+    ToggleDirective
   ],
   imports: [
     BrowserModule,

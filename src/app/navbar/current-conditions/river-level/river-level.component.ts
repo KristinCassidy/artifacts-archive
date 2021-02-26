@@ -6,15 +6,7 @@ import { RiverLevelService } from '../../../services/river-level.service';
 @Component({
 	selector: 'app-river-level',
 	templateUrl: './river-level.component.html',
-	styles: [`
-		.row {
-    		font-family: Helvetica Neue;
-    		margin: 0 2em;
-		}
-		.riverData {
-    		display: flexbox;
-		}
-	`],
+	styleUrls: ['./river-level.component.css'],
 	host: { 'class' : 'content'}
 })
 
@@ -24,6 +16,7 @@ export class RiverLevelComponent implements OnInit, OnDestroy {
 	riverLevel: any;
 
 	constructor( private riverLevelService: RiverLevelService ) { }
+
 
 	ngOnInit() {
 		this.riverSubscription = this.riverLevelService.getRiverLevel()
@@ -36,5 +29,10 @@ export class RiverLevelComponent implements OnInit, OnDestroy {
 	ngOnDestroy() {
 		this.riverSubscription.unsubscribe();
 	}
+
+	// drawGraph() {
+	// 	let canvas = document.getElementById("riverChart");
+	// 	let ctx = canvas.getContext("2d");
+	// }
 
 }

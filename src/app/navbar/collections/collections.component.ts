@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Collection } from '../../models/collection.model';
 
 @Component({
     selector: 'app-collections',
