@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs';
-import { Artifact } from '../models/artifact.model';
-import { Collection } from '../models/collection.model';
+import { Artifact } from './models/artifact.model';
+import { Collection } from './models/collection.model';
 
 export class CollectionService {
     artifactSelected = new Subject<number>();

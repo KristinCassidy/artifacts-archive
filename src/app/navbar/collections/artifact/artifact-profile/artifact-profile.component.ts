@@ -3,7 +3,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CollectionService } from '../../../../services/collection.service';
-import { Artifact } from '../../../../models/artifact.model';
+import { Artifact } from '../../../../services/models/artifact.model';
 
 @Component({
   	selector: 'app-artifact-profile',

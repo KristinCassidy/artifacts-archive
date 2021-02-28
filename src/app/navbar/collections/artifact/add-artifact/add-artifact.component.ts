@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { CollectionService } from '../../../../services/collection.service';
 import { map } from 'rxjs/operators';
-import { Collection } from '../../../../models/collection.model';
-import { Artifact } from '../../../../models/artifact.model';
+import { Collection } from '../../../../services/models/collection.model';
+import { Artifact } from '../../../../services/models/artifact.model';
 
 @Component({
   selector: 'app-add-artifact',

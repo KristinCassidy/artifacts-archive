@@ -59,3 +59,11 @@ h4 {
  }
 
  /* @keyframes {} */
+
+ a {
+     cursor: pointer;
+ }
+
+ a:hover {
+    opacity: 0.308;
+ }

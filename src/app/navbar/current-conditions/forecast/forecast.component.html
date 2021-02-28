@@ -1,0 +1,10 @@
+<h5>FORECAST:</h5>
+<div class="row">
+    
+    <div *ngFor="let day of weekForecast; let i = index" class="col-xs-1">
+        <h5 style="text-align: center;">{{ day.date | date: "EEE" }}</h5>
+        <img src="{{ day.day.condition.icon }}" alt="{{ day.day.condition.text }}">
+        <h6 style="text-align: center;">{{ day.day.avgtemp_f }}&#8457;</h6> 
+    </div>
+</div>
+

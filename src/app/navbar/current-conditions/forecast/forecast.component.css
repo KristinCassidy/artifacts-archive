@@ -1,0 +1,23 @@
+/* .forecastImg {
+
+} */
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px;
+    outline: rgb(0, 0, 0) solid 1px;
+}
+
+.col-xs-1 {
+    display: flexbox;
+    outline: solid 1px whitesmoke;
+    padding: auto;
+}
+
+img {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+}

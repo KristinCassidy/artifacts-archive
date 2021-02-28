@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Event, Params, Router } from '@angular/router';
 
-import { Artifact } from '../../../models/artifact.model';
-import { Collection } from '../../../models/collection.model';
+import { Artifact } from '../../../services/models/artifact.model';
+import { Collection } from '../../../services/models/collection.model';
 import { CollectionService } from '../../../services/collection.service';
 
 @Component({

@@ -2,29 +2,32 @@
     <div class="subheader">
         <h4>Home Page: </h4>  
         <div class="header-icons">
-            <button class="btn btn-success"
+            <a
                 type="button"
                 data-toggle="modal"
                 data-target="#infoModal"
-               onclick="document.getElementById('infoModal').style.display='block'" >
+                onclick="document.getElementById('infoModal').style.display='block'" >
                 <img src="assets/icons/info-outline.svg">
-        </button>
-        <div
-                            
-                            class="modal"
-                            id="infoModal">
-
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Modal Heading</h4>
-                                            <button
-                                                type="button"
-                                                class="close"
-                                                data-dismiss="modal">&times;</button> 
-                                    </div>
-                                    <div class="modal-body">
-                                        Add chance of rain to weather component.
+            </a>
+            <div
+                class="modal"
+                id="infoModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Home Page: next steps</h4>
+                                <button
+                                onclick="document.getElementById('infoModal').style.display='none'"
+                                type="button"
+                                class="close"
+                                data-dismiss="modal">&times;</button>                   
+                        </div>
+                        <div class="modal-body">
+<pre>
+Add chance of rain to weather component.
+Add more forecast days.
+</pre>
+                                        
                                     </div>
                                     <div class="modal-footer">
                                         <button 

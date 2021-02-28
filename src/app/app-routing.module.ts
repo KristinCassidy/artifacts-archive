@@ -9,7 +9,7 @@ import { AddArtifactComponent } from './navbar/collections/artifact/add-artifact
 import { ArtifactProfileComponent } from './navbar/collections/artifact/artifact-profile/artifact-profile.component';
 import { ResearchComponent } from './navbar/research/research.component';
 import { CollectionComponent } from './navbar/collections/collection/collection.component';
-import { CollectionGalleryComponent } from './navbar/collections/collection/collection-gallery/collection-gallery.component';
+import { CollectionGalleryComponent } from './navbar/collections/collection-gallery/collection-gallery.component';
 import { CollectionEditComponent } from './navbar/collections/collection/collection-edit/collection-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 

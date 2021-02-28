@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CollectionService } from '../../../services/collection.service';
 // import { ArtifactService } from './artifact.service';
-import { Artifact } from '../../../models/artifact.model';
+import { Artifact } from '../../../services/models/artifact.model';
 
 @Component({
     selector: 'app-artifact',

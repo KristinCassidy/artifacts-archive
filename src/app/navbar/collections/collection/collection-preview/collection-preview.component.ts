@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Collection } from '../../../../models/collection.model';
+import { Collection } from '../../../../services/models/collection.model';
 
 @Component({
 	selector: 'app-collection-preview',

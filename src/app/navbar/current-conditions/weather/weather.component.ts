@@ -47,6 +47,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
 	weatherSubscription: Subscription;
 	forecastSubscription: Subscription;
 
+
 	cloud: string;
 	wind: string;
 	moonPhase: string;
@@ -94,11 +95,21 @@ constructor( private weatherService: WeatherService ) { }
 				this.todaysForcastArray = this.getNextForecastHours(this.today.hour);
 				// console.log(this.hour);
 				// console.log(this.forecast.forecast.forecastday);
+				
 			});
+		// this.alertsSubscription = this.weatherService.getAlerts()
+		// 		.subscribe( info => {
+		// 			this.alerts = info;
+		// 			console.log(this.alerts)
+
+		// 		})
+	
+			
     }
 
   	ngOnDestroy() {
 		this.weatherSubscription.unsubscribe();
+		this.forecastSubscription.unsubscribe();
 	}
 
 	getHour(date: string) {
@@ -124,5 +135,7 @@ constructor( private weatherService: WeatherService ) { }
 		let tomorrowsHours = this.tomorrow.hour.slice(0, 12);
 		return tomorrowsHours;
 	}
+
+
 
 }

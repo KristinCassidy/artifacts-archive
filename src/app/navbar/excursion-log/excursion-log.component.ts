@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Excursion } from '../../models/excursion.model';
+import { Excursion } from '../../services/models/excursion.model';
 
 @Component({
   selector: 'app-excursion-log',

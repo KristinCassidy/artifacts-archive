@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Link } from '../../models/research-link.model';
+import { Link } from '../../services/models/research-link.model';
 
 @Component({
   selector: 'app-research',

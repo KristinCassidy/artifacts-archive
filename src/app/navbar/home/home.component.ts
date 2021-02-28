@@ -14,14 +14,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onToggle(event: Event) {
-    let modal = document.getElementById("infoModal");
-      if ( modal.className !== "active") {
-        modal.className = "active";
-      } else {
-        modal.className = "!active";
-      };
-  } 
-
 
 }

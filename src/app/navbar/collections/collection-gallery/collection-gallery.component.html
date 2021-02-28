@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="subheader">
+    
+        <div class="collection-name">   
+               <h4>Collections:</h4>   
+        </div>
+        <div class="edit-icons">
+            <a id="edit"
+                class="add"
+                type="button"
+                data-toggle="modal"
+                data-target="#addModal"
+                onclick="document.getElementById('addModal').style.display='block'">
+                <img src="assets/icons/add.png" alt="add">
+            </a>
+            <ng-template #tipContent>words</ng-template>
+            <a class="edit">
+                <img src="assets/icons/icon-edit_24px.svg" alt="edit">
+            </a>
+
+            <div
+                class="modal"
+                id="addModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Create New Collection</h4>
+                                <button
+                                    onclick="document.getElementById('addModal').style.display='none'"
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal">&times;</button>                   
+                        </div>
+                        <div class="modal-body">
+                        <app-add-collection></app-add-collection>
+                        </div>
+                        <div class="modal-footer">
+                            <button 
+                                onclick="document.getElementById('addModal').style.display='none'"
+                                type="button" 
+                                class="btn btn-secondary" 
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <div class="collection-gallery">
+        <app-collection-preview 
+            *ngFor="let collectionPreview of collections; let i = index;"
+            [collection]="collectionPreview"
+            [index]="i">
+        </app-collection-preview>
+    </div>
+ </div>
+
+ 
+ 
+ 
+

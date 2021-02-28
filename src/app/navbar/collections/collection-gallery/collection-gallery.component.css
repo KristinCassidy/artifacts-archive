@@ -46,6 +46,7 @@
 
 .edit {
     outline-offset: 0.3em;
+    
 }
 
 .edit:hover {
@@ -65,4 +66,10 @@ img {
     margin-right: 1em;
     margin-bottom: 1em;
     padding: 0.2em 0 0 0.5em;
+}
+
+#addModal {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* animation-name: fade; */
+    transition: all 0.3s;
 }
